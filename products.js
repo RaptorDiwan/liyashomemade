@@ -12,7 +12,12 @@ const PRODUCTS = [
     description: "Whole ragi (finger millet) is roasted, sun-dried, and ground fresh in small batches, the same way it's made at home. No polishing, no bleaching, nothing added. Just one ingredient: whole ragi.",
     ingredients: ["100% Whole Ragi (Finger Millet)"],
     process: ["Dry-roast the whole grain", "Dry at room temperature", "Grind into fine powder"],
-    benefits: ["Strong bones", "Helps blood sugar control", "Better digestion", "Supports weight management", "Iron rich", "Naturally gluten-free"],
+    benefits: [
+      { title: "Calcium-Rich Bones", detail: "Ragi has about 10 times more calcium than wheat or rice. It is traditionally used to build bone strength in children and maintain bone density in elders." },
+      { title: "Easy on the Stomach", detail: "The roasting process breaks down complex starches, making it very gentle on the stomach and supporting natural, easy digestion." },
+      { title: "Natural Body Coolant", detail: "Finger millet acts as a natural body coolant, making it perfect as a morning porridge (kanji) to beat the summer heat." },
+      { title: "Iron-Rich Energy", detail: "Packed with natural iron, it helps boost red blood cell count, combats anemia, and keeps fatigue away throughout the day." }
+    ],
     dishes: ["Ragi Roti", "Ragi Malt", "Ragi Dosa", "Ragi Kali", "Ragi Kanji", "Ragi Kool"]
   },
   {
@@ -28,7 +33,12 @@ const PRODUCTS = [
     description: "Whole kambu (pearl millet) grain, cleaned of stone and debris, roasted and dried the traditional way before grinding. Naturally cooling for the body, a summer staple in many South Indian kitchens.",
     ingredients: ["100% Whole Kambu (Pearl Millet)"],
     process: ["Remove stone & debris, roast whole grain", "Dry at room temperature", "Grind into fine powder"],
-    benefits: ["High in iron", "Low glycemic index", "Naturally gluten-free", "Better digestion", "Cools the body"],
+    benefits: [
+      { title: "Beat the Heat", detail: "Kambu is the ultimate traditional coolant. A glass of Kambu Kool (millet porridge with buttermilk) keeps the body cool and hydrated for hours." },
+      { title: "High Iron & Stamina", detail: "Provides a high dose of plant-based iron, which helps combat fatigue and maintains energy levels during long workdays." },
+      { title: "Sustained Energy", detail: "Rich in complex carbohydrates that digest slowly, keeping you full longer and preventing midday sluggishness." },
+      { title: "Good for the Heart", detail: "Contains magnesium and potassium, which help regulate blood pressure and support overall heart health." }
+    ],
     dishes: ["Kambu Kool / Kanji", "Kambu Roti", "Kambu Dosa", "Kambu Puttu"]
   },
   {
@@ -44,7 +54,12 @@ const PRODUCTS = [
     description: "Black urad dal, dry-roasted and blended with raw rice in the traditional ratio, then stone-ground into a fine mix. The base of ulundhu kali, a thick, iron-rich sweet cooked with jaggery and sesame oil.",
     ingredients: ["Black Urad Dal", "Raw Rice"],
     process: ["Dry-roast the urad dal", "Dry at room temperature", "Mix with raw rice and grind into powder"],
-    benefits: ["Bone & joint strength", "Supports women's health", "Aids digestion & gut health", "Energy & stamina", "Minerals for skin & hair"],
+    benefits: [
+      { title: "Bone & Joint Strength", detail: "In South India, black urad dal is the go-to remedy for strengthening the spine, hips, and joints. It is traditionally cooked with sesame oil and palm jaggery." },
+      { title: "Women's Health Support", detail: "Valued as a strengthening food during puberty, pregnancy, and post-delivery, helping to replenish core energy and soothe back pain." },
+      { title: "High Protein & Muscle Build", detail: "Loaded with vegetarian protein, it helps repair muscles and build body strength naturally." },
+      { title: "Healthy Digestion", detail: "The combination of soluble and insoluble fiber keeps the gut clean and assists in smooth digestion." }
+    ],
     dishes: ["Ulundhu Kali (sweet, made with palm jaggery & sesame oil)", "Ulundhu Kanji (sweet or porridge)", "Instant Ladoo"]
   },
   {
@@ -60,7 +75,12 @@ const PRODUCTS = [
     description: "Black rice (karuppu kavuni) washed, dried and roasted whole along with moong dal, barley, horse gram and warm spices, then ground fine. Rich, nutty, and deeply traditional.",
     ingredients: ["Karuppu Kavuni Rice", "Moong Dal", "Barley", "Horse Gram", "Dry Garlic", "Jeera (Cumin)", "Pepper"],
     process: ["Wash and dry the rice", "Dry-roast", "Dry at room temperature", "Grind into powder"],
-    benefits: ["Rich in antioxidants", "Aids digestion", "Manages blood sugar", "Supports weight loss", "Boosts immunity & energy"],
+    benefits: [
+      { title: "Antioxidant Powerhouse", detail: "The deep purple color comes from anthocyanins—the same antioxidants found in blueberries. It helps cleanse the body and fight inflammation." },
+      { title: "Low Glycemic Index", detail: "Helps manage blood sugar levels by preventing sudden insulin spikes, making it excellent for diabetic care." },
+      { title: "Immunity Booster", detail: "Packed with essential minerals like zinc and iron that build a strong defense system against seasonal colds and infections." },
+      { title: "Heart & Liver Detox", detail: "Helps detoxify the body, supports liver function, and helps keep bad cholesterol (LDL) in check." }
+    ],
     dishes: ["Porridge / Kanji", "Sweet Malt", "Steamed Puttu"]
   },
   {
@@ -77,7 +97,12 @@ const PRODUCTS = [
     description: "A wholesome traditional blend of roasted, sun-dried, and stone-ground grains. Contains nine premium ingredients carefully proportioned to provide energy, digestion, and daily strength.",
     ingredients: ["Wheat", "Kambu", "Ragi", "White Cholam", "Corn", "Varagu Rice", "Samai Rice", "Kuthiraicali Rice", "Thinai"],
     process: ["Clean and roast each grain", "Dry at room temperature", "Blend and grind into powder"],
-    benefits: ["Helps blood cholesterol levels", "Strong muscles & energy", "Steady blood sugar", "Better digestion"],
+    benefits: [
+      { title: "Complete Daily Nutrition", detail: "Blends nine different traditional millets and grains, ensuring you get a balanced mix of proteins, fiber, vitamins, and minerals in a single cup." },
+      { title: "Steady Energy Release", detail: "The complex carbohydrates from the mixed millets provide stable, long-lasting energy without the crash associated with refined flour." },
+      { title: "High Fiber for Gut Health", detail: "Keeps your digestion smooth, prevents constipation, and supports a healthy weight by keeping you satiated." },
+      { title: "Immunity and Strength", detail: "The combination of ragi, kambu, and grains provides trace minerals that fortify the immune system and support daily cell repair." }
+    ],
     dishes: ["Pancakes", "Porridge / Kanji", "Instant Dosa", "Health Mix Ladoo"],
     variants: [
       { id: "multigrain-health-mix-200g", weight: "200g", price: 99, label: "200 Gms (Launch Offer)" },
@@ -98,7 +123,12 @@ const PRODUCTS = [
     description: "A wholesome traditional blend of roasted, sun-dried, and stone-ground grains. Contains nine premium ingredients carefully proportioned to provide energy, digestion, and daily strength.",
     ingredients: ["Wheat", "Kambu", "Ragi", "White Cholam", "Corn", "Varagu Rice", "Samai Rice", "Kuthiraicali Rice", "Thinai"],
     process: ["Clean and roast each grain", "Dry at room temperature", "Blend and grind into powder"],
-    benefits: ["Helps blood cholesterol levels", "Strong muscles & energy", "Steady blood sugar", "Better digestion"],
+    benefits: [
+      { title: "Complete Daily Nutrition", detail: "Blends nine different traditional millets and grains, ensuring you get a balanced mix of proteins, fiber, vitamins, and minerals in a single cup." },
+      { title: "Steady Energy Release", detail: "The complex carbohydrates from the mixed millets provide stable, long-lasting energy without the crash associated with refined flour." },
+      { title: "High Fiber for Gut Health", detail: "Keeps your digestion smooth, prevents constipation, and supports a healthy weight by keeping you satiated." },
+      { title: "Immunity and Strength", detail: "The combination of ragi, kambu, and grains provides trace minerals that fortify the immune system and support daily cell repair." }
+    ],
     dishes: ["Pancakes", "Porridge / Kanji", "Instant Dosa", "Health Mix Ladoo"],
     isVariant: true,
     variants: [
@@ -120,7 +150,12 @@ const PRODUCTS = [
     description: "A nourishing and gentle blend of premium ingredients like badam, cashew, fried gram dal, makhana, and peanuts. Crafted specifically for easy digestion and growth support. Safe to feed babies from 6 months of age.",
     ingredients: ["Badam", "Cashew", "Fried Gram Dall", "Makhana", "White Poha", "Red Poha", "Peanut"],
     process: ["Roast each ingredient separately", "Dry at room temperature", "Grind together into a fine powder"],
-    benefits: ["Supports bone development", "Protein rich", "Healthy weight gain", "Sustained energy", "Easy digestion", "From 6 Months"],
+    benefits: [
+      { title: "Gentle on Tiny Tummies", detail: "The grains and nuts are roasted and stone-ground to a super-fine powder, ensuring it is very easy to digest for babies starting from 6 months." },
+      { title: "Healthy Weight Gain", detail: "Formulated with energy-dense ingredients like badam, cashew, and poha to support healthy growth and physical development." },
+      { title: "Strong Teeth & Bones", detail: "Packed with natural calcium from grain mixes, essential for forming strong teeth and skeleton structure in early childhood." },
+      { title: "Brain Development Support", detail: "Premium nuts (almonds and cashews) provide healthy fats and micronutrients that support early cognitive and brain growth." }
+    ],
     dishes: ["Porridge / Kanji", "Steamed cake", "Baby food puree"],
     variants: [
       { id: "baby-health-mix-100g", weight: "100g", price: 79, label: "100 Gms (Launch Offer)" },
@@ -141,7 +176,12 @@ const PRODUCTS = [
     description: "A nourishing and gentle blend of premium ingredients like badam, cashew, fried gram dal, makhana, and peanuts. Crafted specifically for easy digestion and growth support. Safe to feed babies from 6 months of age.",
     ingredients: ["Badam", "Cashew", "Fried Gram Dall", "Makhana", "White Poha", "Red Poha", "Peanut"],
     process: ["Roast each ingredient separately", "Dry at room temperature", "Grind together into a fine powder"],
-    benefits: ["Supports bone development", "Protein rich", "Healthy weight gain", "Sustained energy", "Easy digestion", "From 6 Months"],
+    benefits: [
+      { title: "Gentle on Tiny Tummies", detail: "The grains and nuts are roasted and stone-ground to a super-fine powder, ensuring it is very easy to digest for babies starting from 6 months." },
+      { title: "Healthy Weight Gain", detail: "Formulated with energy-dense ingredients like badam, cashew, and poha to support healthy growth and physical development." },
+      { title: "Strong Teeth & Bones", detail: "Packed with natural calcium from grain mixes, essential for forming strong teeth and skeleton structure in early childhood." },
+      { title: "Brain Development Support", detail: "Premium nuts (almonds and cashews) provide healthy fats and micronutrients that support early cognitive and brain growth." }
+    ],
     dishes: ["Porridge / Kanji", "Steamed cake", "Baby food puree"],
     isVariant: true,
     variants: [

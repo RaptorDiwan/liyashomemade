@@ -259,9 +259,19 @@
         </div>
 
         <div class="tab-panel" data-panel="benefits">
-          <ul class="benefit-list">
-            ${p.benefits.map(b => `<li>${checkSvg}${b}</li>`).join("")}
-          </ul>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 10px;">
+            ${p.benefits.map(b => `
+              <div style="background-color: var(--paper); border: 1px solid var(--paper-alt-2); padding: 20px; border-radius: var(--radius); border-left: 4px solid var(--brand-green); box-shadow: 0 4px 12px rgba(47, 64, 37, 0.02);">
+                <h4 style="color: var(--brand-green); font-size: 15.5px; margin-bottom: 8px; font-weight: 700; display: flex; align-items: center; gap: 8px; font-family: var(--font-main);">
+                  <span style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; background-color: var(--brand-green-light); color: var(--brand-green); flex-shrink: 0; padding: 4px;">
+                    ${checkSvg}
+                  </span>
+                  ${b.title}
+                </h4>
+                <p style="font-size: 14px; color: var(--ink-light); line-height: 1.5; margin: 0;">${b.detail}</p>
+              </div>
+            `).join("")}
+          </div>
         </div>
 
         <div class="tab-panel" data-panel="dishes">
