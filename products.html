@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products | Liya's Homemade</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announce">
+    Hand-ground weekly <span class="dot">•</span> Zero preservatives <span class="dot">•</span> Ships across India
+  </div>
+
+  <!-- Header Section -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Liya's Homemade Logo" class="logo-img">
+        <span>Liya's Homemade</span>
+      </a>
+      
+      <span class="kitchen-badge">From our kitchen, to yours</span>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="index.html#about">About Us</a>
+        <a href="health.html">Health Benefits</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn" onclick="location.href='cart.html'" aria-label="View Shopping Cart">
+          <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.06 1.4-2.54h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+          Cart - <span data-cart-count>0</span>
+        </button>
+        <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Products Catalog Section -->
+  <main class="products-section wrap" style="padding-top: 40px; padding-bottom: 80px;">
+    <h1 class="section-title" style="text-align: left; margin-bottom: 8px;">Our Homemade Grains & Mixes</h1>
+    <p style="color: var(--ink-light); font-size: 16px; margin-bottom: 40px; max-width: 600px; line-height: 1.5;">
+      Dry-roasted and stone-ground by hand in small batches. Zero preservatives, zero artificial colors, made exactly like at home.
+    </p>
+
+    <div class="products-grid" id="products-grid">
+      <!-- Loaded dynamically from products.js -->
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer id="contact">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color: white;">
+            <img src="logo.png" alt="Liya's Homemade Logo" class="logo-img" style="border-color: rgba(255,255,255,0.2);">
+            <span>Liya's Homemade</span>
+          </a>
+          <p>Traditional goodness, made with love. Wholesome by nature, homemade by choice.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/liyashomemade/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://wa.me/918110021313" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.517 2.266 2.27 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.665.989 3.3 1.472 5.358 1.473 5.432 0 9.851-4.387 9.855-9.782.002-2.614-1.013-5.074-2.859-6.927C17.078 2.062 14.62 1.045 12.01 1.045c-5.444 0-9.866 4.39-9.87 9.786-.002 2.08.547 4.11 1.588 5.91l-.26.953-.943 3.44 3.535-.927.988.597zm11.215-4.595c-.3-.15-1.774-.875-2.048-.975-.274-.1-.474-.15-.674.15-.2.3-1.774 2.225-1.774 2.225s-.2.2-.55.05c-.35-.175-1.479-.545-2.818-1.739-1.042-.93-1.745-2.08-1.95-2.43-.2-.35-.02-.54.155-.715.16-.16.35-.4.525-.6.175-.2.24-.35.35-.58.115-.23.06-.43-.03-.63-.09-.2-.674-1.625-.925-2.225-.244-.588-.493-.51-.674-.52-.172-.01-.37-.01-.57-.01-.2 0-.525.075-.8.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.22 5.12 4.52 3.01 1.3 3.01.866 3.56.816.55-.05 1.775-.725 2.025-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="health.html">Health Benefits</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="#">Shipping & Delivery</a></li>
+            <li><a href="refund-policy.html">Returns & Refunds</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Get in touch</h4>
+          <p><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.149 15.149 0 0 0 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> +91 81100 21313</p>
+          <p><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> liyashomemade@gmail.com</p>
+          <p><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Chennai, Tamilnadu</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Liya's Homemade. All rights reserved.</span>
+        <span>Made with care, packed by hand.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a class="wa-float" href="https://wa.me/918110021313" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.517 2.266 2.27 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.665.989 3.3 1.472 5.358 1.473 5.432 0 9.851-4.387 9.855-9.782.002-2.614-1.013-5.074-2.859-6.927C17.078 2.062 14.62 1.045 12.01 1.045c-5.444 0-9.866 4.39-9.87 9.786-.002 2.08.547 4.11 1.588 5.91l-.26.953-.943 3.44 3.535-.927.988.597zm11.215-4.595c-.3-.15-1.774-.875-2.048-.975-.274-.1-.474-.15-.674.15-.2.3-1.774 2.225-1.774 2.225s-.2.2-.55.05c-.35-.175-1.479-.545-2.818-1.739-1.042-.93-1.745-2.08-1.95-2.43-.2-.35-.02-.54.155-.715.16-.16.35-.4.525-.6.175-.2.24-.35.35-.58.115-.23.06-.43-.03-.63-.09-.2-.674-1.625-.925-2.225-.244-.588-.493-.51-.674-.52-.172-.01-.37-.01-.57-.01-.2 0-.525.075-.8.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.22 5.12 4.52 3.01 1.3 3.01.866 3.56.816.55-.05 1.775-.725 2.025-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/></svg>
+  </a>
+
+  <!-- Shared Javascript Libraries -->
+  <script src="products.js"></script>
+  <script src="cart.js"></script>
+
+  <script>
+    // Toggle Mobile Navigation
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', () => {
+        mainNav.style.display = mainNav.style.display === 'flex' ? 'none' : 'flex';
+        mainNav.style.flexDirection = 'column';
+        mainNav.style.position = 'absolute';
+        mainNav.style.top = '100%';
+        mainNav.style.left = '0';
+        mainNav.style.right = '0';
+        mainNav.style.backgroundColor = 'var(--paper)';
+        mainNav.style.padding = '16px';
+        mainNav.style.borderBottom = '1px solid var(--line)';
+        mainNav.style.gap = '12px';
+      });
+    }
+
+    // Render Products Grid
+    const grid = document.getElementById("products-grid");
+    if (grid) {
+      grid.innerHTML = PRODUCTS.filter(p => !p.isVariant).map(p => renderProductCardHTML(p)).join("");
+      updateAllCartControls();
+    }
+  </script>
+</body>
+</html>

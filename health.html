@@ -25,7 +25,7 @@
 
       <nav class="main-nav">
         <a href="index.html">Home</a>
-        <a href="index.html#products">Products</a>
+        <a href="products.html">Products</a>
         <a href="index.html#about">About Us</a>
         <a href="health.html" class="active">Health Benefits</a>
         <a href="index.html#contact">Contact</a>
@@ -61,19 +61,88 @@
     </div>
   </main>
 
-  <!-- Quick Finder Section -->
-  <section class="finder-section">
+  <!-- Why Homemade Section -->
+  <section class="why-homemade-section" style="background-color: var(--paper-alt); padding: 50px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
     <div class="wrap">
-      <h2 class="section-title" style="text-align: left; margin-bottom: 8px;">Quick Benefit Finder</h2>
-      <p style="color: var(--ink-light); font-size: 15px; margin-bottom: 24px;">Use this comparison table to quickly locate a mix matching your exact concern.</p>
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 40px auto;">
+        <h2 class="section-title" style="margin-bottom: 8px;">The Homemade Difference</h2>
+        <span class="section-subtitle-icon">🥣</span>
+        <p style="color: var(--ink-light); font-size: 15px; margin-top: 12px; line-height: 1.6;">
+          Most commercial health mixes sit on warehouse shelves for months, packed with preservatives. Here is why choosing fresh, stone-ground homemade mixes is the best decision for your family.
+        </p>
+      </div>
+
+      <div class="homemade-props" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 48px;">
+        <div style="background-color: var(--paper); padding: 24px; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: 0 4px 12px rgba(47, 64, 37, 0.02);">
+          <h4 style="color: var(--brand-green); font-size: 16px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+            <span>❌</span> 100% Chemical & Preservative Free
+          </h4>
+          <p style="font-size: 13.5px; color: var(--ink-light); line-height: 1.6; margin: 0;">
+            We add absolutely zero shelf-life extenders, artificial colors, anti-caking agents, or synthetic flavors. It is as pure as if you roasted and ground it in your own kitchen.
+          </p>
+        </div>
+        <div style="background-color: var(--paper); padding: 24px; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: 0 4px 12px rgba(47, 64, 37, 0.02);">
+          <h4 style="color: var(--brand-green); font-size: 16px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+            <span>⚙️</span> Slow Dry-Roasting & Stone-Grinding
+          </h4>
+          <p style="font-size: 13.5px; color: var(--ink-light); line-height: 1.6; margin: 0;">
+            Mass-production factories use high-speed, high-heat milling which burns away natural oils and vital vitamins. We slow-roast and stone-grind to keep the core nutrients and natural aroma intact.
+          </p>
+        </div>
+        <div style="background-color: var(--paper); padding: 24px; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: 0 4px 12px rgba(47, 64, 37, 0.02);">
+          <h4 style="color: var(--brand-green); font-size: 16px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+            <span>🧼</span> Hand-Cleaned & Small Batches
+          </h4>
+          <p style="font-size: 13.5px; color: var(--ink-light); line-height: 1.6; margin: 0;">
+            Every single batch of millet, grain, and nut is hand-sorted, thoroughly washed, and sun-dried in a clean environment. We make fresh batches weekly, ensuring the pack delivered to you is fresh.
+          </p>
+        </div>
+      </div>
+
+      <h3 style="font-size: 18px; color: var(--brand-green); font-weight: 700; margin-bottom: 20px; text-align: center; font-family: var(--font-main);">Homemade vs. Factory-Made Comparison</h3>
       
       <div class="table-wrapper">
-        <table class="finder-table" id="finder-table">
-          <!-- Loaded dynamically -->
+        <table class="finder-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Factory / Store-Bought Mixes</th>
+              <th>Liya's Homemade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight:600;">Preservatives & Additives</td>
+              <td style="color: #c0392b;">Contains chemical extenders, artificial flavors, and stabilizers to sit on shelves.</td>
+              <td style="font-weight:600; color: var(--brand-green);">❌ 100% Preservative Free. Only natural grains and nuts.</td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Nutrient Retention</td>
+              <td style="color: #c0392b;">High-heat commercial mills strip out healthy fats, natural oils, and vitamins.</td>
+              <td style="font-weight:600; color: var(--brand-green);">⚙️ Traditional dry-roasting & stone-ground keeps nutrients alive.</td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Freshness</td>
+              <td style="color: #c0392b;">Manufactured months ago in giant quantities, losing natural aroma and flavor.</td>
+              <td style="font-weight:600; color: var(--brand-green);">🥣 Prepared weekly in small, hygienic home batches.</td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Quality of Grains</td>
+              <td style="color: #c0392b;">Often bulk-purchased lower grade grains padded with cheap flour fillers.</td>
+              <td style="font-weight:600; color: var(--brand-green);">🌾 100% premium whole grains, seeds, and nuts selected by hand.</td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Hygienic Cleaning</td>
+              <td style="color: #c0392b;">Machine-sifted only; grains are rarely washed or sun-dried individually.</td>
+              <td style="font-weight:600; color: var(--brand-green);">🧼 Meticulously hand-cleaned, washed, and sun-dried.</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>
   </section>
+
+
 
   <!-- Footer Section -->
   <footer id="contact">
@@ -86,13 +155,10 @@
           </a>
           <p>Traditional goodness, made with love. Wholesome by nature, homemade by choice.</p>
           <div class="social-links">
-            <a href="#" class="social-link" aria-label="Instagram">
+            <a href="https://www.instagram.com/liyashomemade/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
               <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
             </a>
-            <a href="#" class="social-link" aria-label="Facebook">
-              <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
-            </a>
-            <a href="#" class="social-link" aria-label="WhatsApp">
+            <a href="https://wa.me/918110021313" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.517 2.266 2.27 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.665.989 3.3 1.472 5.358 1.473 5.432 0 9.851-4.387 9.855-9.782.002-2.614-1.013-5.074-2.859-6.927C17.078 2.062 14.62 1.045 12.01 1.045c-5.444 0-9.866 4.39-9.87 9.786-.002 2.08.547 4.11 1.588 5.91l-.26.953-.943 3.44 3.535-.927.988.597zm11.215-4.595c-.3-.15-1.774-.875-2.048-.975-.274-.1-.474-.15-.674.15-.2.3-1.774 2.225-1.774 2.225s-.2.2-.55.05c-.35-.175-1.479-.545-2.818-1.739-1.042-.93-1.745-2.08-1.95-2.43-.2-.35-.02-.54.155-.715.16-.16.35-.4.525-.6.175-.2.24-.35.35-.58.115-.23.06-.43-.03-.63-.09-.2-.674-1.625-.925-2.225-.244-.588-.493-.51-.674-.52-.172-.01-.37-.01-.57-.01-.2 0-.525.075-.8.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.22 5.12 4.52 3.01 1.3 3.01.866 3.56.816.55-.05 1.775-.725 2.025-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/></svg>
             </a>
           </div>
@@ -101,7 +167,7 @@
           <h4>Quick Links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#products">Products</a></li>
+            <li><a href="products.html">Products</a></li>
             <li><a href="index.html#about">About Us</a></li>
             <li><a href="health.html">Health Benefits</a></li>
             <li><a href="index.html#contact">Contact</a></li>
@@ -111,7 +177,7 @@
           <h4>Customer Care</h4>
           <ul>
             <li><a href="#">Shipping & Delivery</a></li>
-            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="refund-policy.html">Returns & Refunds</a></li>
             <li><a href="#">FAQs</a></li>
             <li><a href="#">Terms & Conditions</a></li>
             <li><a href="#">Privacy Policy</a></li>
@@ -157,44 +223,43 @@
         mainNav.style.padding = '16px';
         mainNav.style.borderBottom = '1px solid var(--line)';
         mainNav.style.gap = '12px';
-      });
-       const DASH = "—";
+             const DASH = "—";
     const BENEFIT_CATEGORIES = [
       {
         title: "Bones & joint health",
         icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1 3-6z"/></svg>',
         desc: "Calcium and iron-rich grains and dals traditionally used to support bone and joint strength.",
-        products: [["ragi-flour","Ragi Flour"], ["black-urad-dal-mix","Black Urad Dal Mix"], ["baby-health-mix-200g","Baby Health Mix"]]
+        products: [["ragi-flour","Ragi Flour"], ["black-urad-dal-mix","Black Ulundhu Mix"], ["baby-health-mix-200g","Baby Instant Health Mix"]]
       },
       {
         title: "Digestion & gut health",
         icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v5a8 8 0 0 1-8 8 8 8 0 0 1-8-8V4z"/><path d="M8 21h8M12 17v4"/></svg>',
         desc: "High-fibre whole grains that are easy on digestion and support a healthy gut.",
-        products: [["ragi-flour","Ragi Flour"], ["kambu-flour","Kambu Flour"], ["black-urad-dal-mix","Black Urad Dal Mix"], ["karuppu-kavuni-mix","Karuppu Kavuni Mix"], ["multigrain-health-mix-500g","Multi Grain Health Mix"]]
+        products: [["ragi-flour","Ragi Flour"], ["kambu-flour","Kambu Flour"], ["raw-rice-flour","Raw Rice flour (Idiyappam)"], ["black-urad-dal-mix","Black Ulundhu Mix"], ["karuppu-kavuni-mix","Karupu Kavuni Mix"], ["multigrain-health-mix-200g","Multigrain Health Mix"]]
       },
       {
         title: "Blood sugar & cholesterol",
         icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M4 8l16 8M20 8L4 16"/></svg>',
         desc: "Low glycemic index grains that help keep blood sugar and cholesterol levels steady.",
-        products: [["ragi-flour","Ragi Flour"], ["kambu-flour","Kambu Flour"], ["karuppu-kavuni-mix","Karuppu Kavuni Mix"], ["multigrain-health-mix-500g","Multi Grain Health Mix"]]
+        products: [["ragi-flour","Ragi Flour"], ["kambu-flour","Kambu Flour"], ["karuppu-kavuni-mix","Karupu Kavuni Mix"], ["multigrain-health-mix-200g","Multigrain Health Mix"]]
       },
       {
         title: "Iron & everyday energy",
         icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>',
         desc: "Naturally iron-rich grains that support energy and stamina through the day.",
-        products: [["ragi-flour","Ragi Flour"], ["kambu-flour","Kambu Flour"], ["black-urad-dal-mix","Black Urad Dal Mix"]]
+        products: [["ragi-flour","Ragi Flour"], ["kambu-flour","Kambu Flour"], ["black-urad-dal-mix","Black Ulundhu Mix"]]
       },
       {
         title: "Immunity & antioxidants",
         icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v5a8 8 0 0 1-8 8 8 8 0 0 1-8-8V4z"/></svg>',
         desc: "Black rice and warming spices, traditionally valued for immunity support.",
-        products: [["karuppu-kavuni-mix","Karuppu Kavuni Mix"], ["multigrain-health-mix-500g","Multi Grain Health Mix"]]
+        products: [["karuppu-kavuni-mix","Karupu Kavuni Mix"], ["multigrain-health-mix-200g","Multigrain Health Mix"]]
       },
       {
         title: "Babies & growing kids",
         icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.5-7-10a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-7 10-7 10z"/></svg>',
         desc: "Gentle, protein-rich grains, dals and nuts suited to babies from 6 months and growing children.",
-        products: [["baby-health-mix-200g","Baby Health Mix"]]
+        products: [["baby-health-mix-200g","Baby Instant Health Mix"], ["baby-rice-cereal","Baby Rice Cereal"]]
       }
     ];
 
@@ -213,39 +278,7 @@
       `).join("");
     }
 
-    // Finder comparison table rows
-    const FINDER_ROWS = [
-      { id: "ragi-flour", name: "Ragi Flour", cols: ["Iron & bones", "Digestion", "Blood sugar", "Gluten-free"] },
-      { id: "kambu-flour", name: "Kambu Flour", cols: ["Iron", "Cooling", "Blood sugar", "Gluten-free"] },
-      { id: "black-urad-dal-mix", name: "Black Urad Dal Mix", cols: ["Bone & joint", "Women's health", "·", "·"] },
-      { id: "karuppu-kavuni-mix", name: "Karuppu Kavuni Mix", cols: ["Antioxidants", "Immunity", "Blood sugar", "·"] },
-      { id: "multigrain-health-mix-500g", name: "Multi Grain Health Mix", cols: ["Cholesterol care", "Energy", "Digestion", "·"] },
-      { id: "baby-health-mix-200g", name: "Baby Health Mix", cols: ["Bone growth", "Brain support", "Protein", "·"] }
-    ];
 
-    // Render Comparison Finder Table
-    const table = document.getElementById("finder-table");
-    if (table) {
-      table.innerHTML = `
-        <thead>
-          <tr>
-            <th>Mix</th>
-            <th>Benefit 1</th>
-            <th>Benefit 2</th>
-            <th>Benefit 3</th>
-            <th>Benefit 4</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${FINDER_ROWS.map(r => `
-            <tr>
-              <td style="font-weight: 600;"><a href="product.html?id=${r.id}" style="color: var(--brand-green);">${r.name}</a></td>
-              ${r.cols.map(col => `<td>${col === "·" ? DASH : col}</td>`).join("")}
-            </tr>
-          `).join("")}
-        </tbody>
-      `;
-    }
   </script>
 </body>
 </html>

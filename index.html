@@ -26,7 +26,7 @@
 
       <nav class="main-nav">
         <a href="index.html" class="active">Home</a>
-        <a href="index.html#products">Products</a>
+        <a href="products.html">Products</a>
         <a href="index.html#about">About Us</a>
         <a href="health.html">Health Benefits</a>
         <a href="index.html#contact">Contact</a>
@@ -63,6 +63,21 @@
             <a href="#products" class="btn btn-primary">Shop Health Mixes</a>
             <a href="#about" class="btn btn-outline">Our Story &rarr;</a>
           </div>
+          
+          <div class="hero-trust-badges" style="margin-top: 32px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--paper-alt-2); padding-top: 20px;">
+            <div style="display: flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 700; color: var(--brand-green);">
+              <span style="color: #F1C40F; font-size: 15px;">★★★★★</span>
+              <span>Trusted by 500+ happy parents</span>
+            </div>
+            <span style="color: var(--line); font-size: 14px; display: inline-block;">|</span>
+            <div style="font-size: 12.5px; font-weight: 700; color: var(--ink-light); background: var(--paper-alt); padding: 4px 10px; border-radius: 4px; border: 1px dashed var(--line); display: flex; align-items: center; gap: 4px;">
+              <span>🛡️</span> FSSAI Registered
+            </div>
+            <span style="color: var(--line); font-size: 14px; display: inline-block;">|</span>
+            <div style="font-size: 12.5px; font-weight: 700; color: var(--ink-light); background: var(--paper-alt); padding: 4px 10px; border-radius: 4px; border: 1px dashed var(--line); display: flex; align-items: center; gap: 4px;">
+              <span>🧼</span> 100% Hygienic Kitchen
+            </div>
+          </div>
         </div>
 
         <!-- Image Gallery Column -->
@@ -83,7 +98,7 @@
         <!-- Ragi -->
         <div class="category-card" onclick="location.href='product.html?id=ragi-flour'">
           <div class="category-circle">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2c-3 4-3 8 0 12s3 8 0 12"/><path d="M8 8c1 2 1 4 0 6M16 8c-1 2-1 4 0 6"/></svg>
+            <img src="assets/category_ragi.jpg" alt="Ragi Grains">
           </div>
           <span>Ragi</span>
         </div>
@@ -91,7 +106,7 @@
         <!-- Kambu -->
         <div class="category-card" onclick="location.href='product.html?id=kambu-flour'">
           <div class="category-circle">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M9 6l3-3 3 3M8 10h8M7 14h10M9 18h6"/></svg>
+            <img src="assets/category_kambu.jpg" alt="Kambu Grains">
           </div>
           <span>Kambu</span>
         </div>
@@ -99,7 +114,7 @@
         <!-- Black Urad Dal -->
         <div class="category-card" onclick="location.href='product.html?id=black-urad-dal-mix'">
           <div class="category-circle">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>
+            <img src="assets/category_urad.jpg" alt="Black Urad Dal">
           </div>
           <span>Black Urad Dal</span>
         </div>
@@ -107,7 +122,7 @@
         <!-- Multi Grain -->
         <div class="category-card" onclick="location.href='product.html?id=multigrain-health-mix-500g'">
           <div class="category-circle">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15.5c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5zm-1.5-4.5c-.83 0-1.5-.67-1.5-1.5V9.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5V11.5c0 .83-.67 1.5-1.5 1.5z"/></svg>
+            <img src="assets/category_multigrain.jpg" alt="Multi Grain Mix">
           </div>
           <span>Multi Grain</span>
         </div>
@@ -115,7 +130,7 @@
         <!-- Porridge Mix -->
         <div class="category-card" onclick="location.href='product.html?id=karuppu-kavuni-mix'">
           <div class="category-circle">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M4 8l16 8M20 8L4 16"/></svg>
+            <img src="assets/category_porridge.jpg" alt="Porridge Mix">
           </div>
           <span>Porridge Mix</span>
         </div>
@@ -123,7 +138,7 @@
         <!-- Baby Mix -->
         <div class="category-card" onclick="location.href='product.html?id=baby-health-mix-200g'">
           <div class="category-circle">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-4.5-7-10a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-7 10-7 10z"/></svg>
+            <img src="assets/category_porridge.jpg" alt="Baby Mix">
           </div>
           <span>Baby Mix</span>
         </div>
@@ -215,19 +230,19 @@
         </div>
 
         <!-- Testimonials -->
-        <div class="testimonial-card">
+        <div class="testimonial-card" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 250px;">
           <div>
             <h3>What our customers say</h3>
-            <p class="testimonial-quote">
+            <p class="testimonial-quote" id="testi-quote" style="transition: opacity 0.3s ease; opacity: 1;">
               "The taste is so natural and reminds me of what my paati used to make. My kids love it!"
             </p>
           </div>
           <div>
-            <span class="testimonial-author">— Priya, Coimbatore</span>
-            <div class="testimonial-dots">
-              <span class="testimonial-dot active"></span>
-              <span class="testimonial-dot"></span>
-              <span class="testimonial-dot"></span>
+            <span class="testimonial-author" id="testi-author" style="transition: opacity 0.3s ease; opacity: 1; display: block;">— Priya, Coimbatore</span>
+            <div class="testimonial-dots" id="testi-dots">
+              <span class="testimonial-dot active" data-index="0"></span>
+              <span class="testimonial-dot" data-index="1"></span>
+              <span class="testimonial-dot" data-index="2"></span>
             </div>
           </div>
         </div>
@@ -249,13 +264,10 @@
             Traditional goodness, made with love. Wholesome by nature, homemade by choice.
           </p>
           <div class="social-links">
-            <a href="#" class="social-link" aria-label="Instagram">
+            <a href="https://www.instagram.com/liyashomemade/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
               <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
             </a>
-            <a href="#" class="social-link" aria-label="Facebook">
-              <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
-            </a>
-            <a href="#" class="social-link" aria-label="WhatsApp">
+            <a href="https://wa.me/918110021313" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.517 2.266 2.27 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.665.989 3.3 1.472 5.358 1.473 5.432 0 9.851-4.387 9.855-9.782.002-2.614-1.013-5.074-2.859-6.927C17.078 2.062 14.62 1.045 12.01 1.045c-5.444 0-9.866 4.39-9.87 9.786-.002 2.08.547 4.11 1.588 5.91l-.26.953-.943 3.44 3.535-.927.988.597zm11.215-4.595c-.3-.15-1.774-.875-2.048-.975-.274-.1-.474-.15-.674.15-.2.3-1.774 2.225-1.774 2.225s-.2.2-.55.05c-.35-.175-1.479-.545-2.818-1.739-1.042-.93-1.745-2.08-1.95-2.43-.2-.35-.02-.54.155-.715.16-.16.35-.4.525-.6.175-.2.24-.35.35-.58.115-.23.06-.43-.03-.63-.09-.2-.674-1.625-.925-2.225-.244-.588-.493-.51-.674-.52-.172-.01-.37-.01-.57-.01-.2 0-.525.075-.8.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.22 5.12 4.52 3.01 1.3 3.01.866 3.56.816.55-.05 1.775-.725 2.025-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/></svg>
             </a>
           </div>
@@ -266,7 +278,7 @@
           <h4>Quick Links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#products">Products</a></li>
+            <li><a href="products.html">Products</a></li>
             <li><a href="index.html#about">About Us</a></li>
             <li><a href="health.html">Health Benefits</a></li>
             <li><a href="index.html#contact">Contact</a></li>
@@ -278,7 +290,7 @@
           <h4>Customer Care</h4>
           <ul>
             <li><a href="#">Shipping & Delivery</a></li>
-            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="refund-policy.html">Returns & Refunds</a></li>
             <li><a href="#">FAQs</a></li>
             <li><a href="#">Terms & Conditions</a></li>
             <li><a href="#">Privacy Policy</a></li>
@@ -341,22 +353,82 @@
     // Render Products Grid on Homepage
     const grid = document.getElementById("products-grid");
     if (grid) {
-      grid.innerHTML = PRODUCTS.filter(p => !p.isVariant).map(p => `
-        <div class="product-card">
-          <a class="card-link" href="product.html?id=${p.id}">
-            ${productPhotoHTML(p)}
-            <h3>${p.name}</h3>
-            <p class="product-weight">${p.tagline}</p>
-          </a>
-          <div class="product-meta">
-            <span class="product-weight">${p.weight}</span>
-            <span class="product-price">₹${p.price}</span>
-          </div>
-          <button class="btn btn-primary" data-add-to-cart="${p.id}">
-            Add to Cart
-          </button>
-        </div>
-      `).join("");
+      grid.innerHTML = PRODUCTS.filter(p => !p.isVariant).map(p => renderProductCardHTML(p)).join("");
+      updateAllCartControls();
+    }
+
+    // Testimonials Carousel Logic
+    const TESTIMONIALS = [
+      {
+        quote: `"The taste is so natural and reminds me of what my paati used to make. My kids love it!"`,
+        author: "— Priya, Coimbatore"
+      },
+      {
+        quote: `"Finding genuine health mix for my parents was hard until we tried Liya's. The traditional dry-roasting shows in the rich aroma. Excellent quality and very healthy."`,
+        author: "— Suresh, Chennai"
+      },
+      {
+        quote: `"My 8-month-old baby absolute loves the Baby Health Mix. It is so easy to digest and gives me peace of mind because I know exactly what ingredients went into it. Highly recommended!"`,
+        author: "— Jeevitha, Chennai"
+      }
+    ];
+
+    let currentTestiIndex = 0;
+    const testiQuote = document.getElementById("testi-quote");
+    const testiAuthor = document.getElementById("testi-author");
+    const testiDotsContainer = document.getElementById("testi-dots");
+
+    function showTestimonial(index) {
+      if (!testiQuote || !testiAuthor) return;
+      
+      // Fade out
+      testiQuote.style.opacity = 0;
+      testiAuthor.style.opacity = 0;
+      
+      setTimeout(() => {
+        currentTestiIndex = index;
+        testiQuote.textContent = TESTIMONIALS[index].quote;
+        testiAuthor.textContent = TESTIMONIALS[index].author;
+        
+        // Update active dot indicator
+        if (testiDotsContainer) {
+          testiDotsContainer.querySelectorAll(".testimonial-dot").forEach((dot, idx) => {
+            if (idx === index) {
+              dot.classList.add("active");
+            } else {
+              dot.classList.remove("active");
+            }
+          });
+        }
+        
+        // Fade in
+        testiQuote.style.opacity = 1;
+        testiAuthor.style.opacity = 1;
+      }, 300);
+    }
+
+    // Set up click handlers on dots
+    if (testiDotsContainer) {
+      testiDotsContainer.querySelectorAll(".testimonial-dot").forEach((dot, idx) => {
+        dot.addEventListener("click", () => {
+          showTestimonial(idx);
+          resetTestiTimer();
+        });
+      });
+    }
+
+    // Auto rotate every 6 seconds
+    let testiInterval = setInterval(() => {
+      const nextIndex = (currentTestiIndex + 1) % TESTIMONIALS.length;
+      showTestimonial(nextIndex);
+    }, 6000);
+
+    function resetTestiTimer() {
+      clearInterval(testiInterval);
+      testiInterval = setInterval(() => {
+        const nextIndex = (currentTestiIndex + 1) % TESTIMONIALS.length;
+        showTestimonial(nextIndex);
+      }, 6000);
     }
   </script>
 </body>
