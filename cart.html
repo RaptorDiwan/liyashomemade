@@ -92,33 +92,36 @@
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
-  <div class="announce">
-    Hand-ground weekly <span class="dot">•</span> Zero preservatives <span class="dot">•</span> Free TN Delivery on ₹499+ <span class="dot">•</span> Pan-India Courier
+  <!-- Top Heritage Bar -->
+  <div class="royal-top-bar">
+    🏛️ Chettinad & Pandya Royal Grain Tradition • <span>Free Tamil Nadu Delivery on ₹499+</span> • Direct Kitchen WhatsApp Dispatch
   </div>
 
   <!-- Header Section -->
   <header>
-    <div class="header-inner">
-      <a href="index.html" class="logo">
-        <img src="logo.png" alt="Liya's Homemade Logo" class="logo-img">
-        <span>Liya's Homemade</span>
-      </a>
-      
-      <span class="kitchen-badge">Wholesome by nature, homemade by choice</span>
+    <div class="wrap header-inner">
+      <div class="brand-group" style="display: flex; align-items: center; gap: 16px; flex-shrink: 0;">
+        <a href="index.html" class="brand logo">
+          <div class="logo-frame">
+            <img src="logo.png" alt="Liya's Homemade Logo" class="logo-img">
+          </div>
+          <span class="brand-title">Liya's Homemade</span>
+        </a>
+        <span class="kitchen-badge">Wholesome by nature, homemade by choice</span>
+      </div>
 
-      <nav class="main-nav">
+      <nav class="main-nav nav-links">
         <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About Us</a>
+        <a href="products.html">Heirloom Products</a>
         <a href="health.html">Health Benefits</a>
+        <a href="about.html">Amma's Story</a>
+        <a href="faq.html">FAQs</a>
         <a href="contact.html">Contact</a>
       </nav>
 
       <div class="header-actions">
-        <button class="cart-btn" aria-label="View Shopping Cart">
-          <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.06 1.4-2.54h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-          Cart - <span data-cart-count>0</span>
+        <button class="btn-gold-cart" onclick="toggleCartDrawer(true)" aria-label="View Shopping Cart">
+          <span style="font-size: 15px;">🛒</span> <span>Cart (<span data-cart-count>0</span>)</span>
         </button>
         <button class="menu-toggle" aria-label="Toggle Navigation Menu">
           <span></span>
