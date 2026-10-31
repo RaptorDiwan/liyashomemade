@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Cart | Liya's Homemade</title>
+  <meta name="description" content="View your fresh stone-ground homemade mixes, select quantity, and checkout securely via UPI and WhatsApp.">
+  <link rel="icon" type="image/png" href="logo.png">
   <link rel="stylesheet" href="index.css">
   <style>
     /* Additional custom styles for UPI payment box on cart page */
@@ -19,17 +21,18 @@
       align-items: center;
       gap: 20px;
       margin-bottom: 16px;
+      flex-wrap: wrap;
     }
     .upi-qr-box {
-      width: 100px;
-      height: 100px;
+      width: 110px;
+      height: 110px;
       background-color: var(--white);
       border: 1px solid var(--paper-alt-2);
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 10px;
+      padding: 6px;
     }
     .upi-id-box {
       font-size: 16px;
@@ -37,20 +40,38 @@
       color: var(--brand-green);
       margin-bottom: 4px;
     }
+    .upi-btn-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
     .upi-copy-btn {
       background-color: var(--brand-green-light);
       border: 1px solid var(--brand-green);
       color: var(--brand-green);
-      padding: 6px 14px;
+      padding: 8px 16px;
       border-radius: 20px;
-      font-size: 12.5px;
+      font-size: 13px;
       font-weight: 600;
       cursor: pointer;
-      margin-top: 6px;
       transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
     }
     .upi-copy-btn:hover {
       background-color: var(--brand-green);
+      color: var(--white);
+    }
+    .upi-pay-app-btn {
+      background-color: var(--brand-green);
+      color: var(--white);
+      border: 1px solid var(--brand-green);
+    }
+    .upi-pay-app-btn:hover {
+      background-color: var(--brand-green-hover);
       color: var(--white);
     }
     .checkbox-container {
@@ -73,7 +94,7 @@
 
   <!-- Top Announcement Bar -->
   <div class="announce">
-    Hand-ground weekly <span class="dot">•</span> Zero preservatives <span class="dot">•</span> Ships across India
+    Hand-ground weekly <span class="dot">•</span> Zero preservatives <span class="dot">•</span> Free TN Delivery on ₹499+ <span class="dot">•</span> Pan-India Courier
   </div>
 
   <!-- Header Section -->
@@ -84,18 +105,18 @@
         <span>Liya's Homemade</span>
       </a>
       
-      <span class="kitchen-badge">From our kitchen, to yours</span>
+      <span class="kitchen-badge">Wholesome by nature, homemade by choice</span>
 
       <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
-        <a href="index.html#about">About Us</a>
+        <a href="about.html">About Us</a>
         <a href="health.html">Health Benefits</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
 
       <div class="header-actions">
-        <button class="cart-btn" onclick="location.href='cart.html'" aria-label="View Shopping Cart">
+        <button class="cart-btn" aria-label="View Shopping Cart">
           <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.06 1.4-2.54h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
           Cart - <span data-cart-count>0</span>
         </button>
@@ -121,7 +142,7 @@
         </div>
 
         <!-- Checkout Form & Details -->
-        <div class="checkout-form" style="background-color: var(--white); border: 1px solid var(--paper-alt-2); border-radius: var(--radius); padding: 32px; margin-top: 32px; box-shadow: 0 12px 28px rgba(47, 64, 37, 0.04);">
+        <div class="checkout-form" id="checkout-form-container" style="background-color: var(--white); border: 1px solid var(--paper-alt-2); border-radius: var(--radius); padding: 32px; margin-top: 32px; box-shadow: 0 12px 28px rgba(47, 64, 37, 0.04);">
           <h2 style="font-size: 20px; color: var(--brand-green); margin-bottom: 24px; border-bottom: 1px solid var(--paper-alt-2); padding-bottom: 12px;">Delivery & Payment Details</h2>
           
           <div class="form-group">
@@ -132,7 +153,7 @@
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div class="form-group">
               <label for="phone">Phone Number *</label>
-              <input id="phone" type="tel" placeholder="10-digit phone number">
+              <input id="phone" type="tel" placeholder="10-digit mobile number">
             </div>
             <div class="form-group">
               <label for="email">Email (optional)</label>
@@ -142,35 +163,38 @@
 
           <div class="form-group">
             <label for="address">Delivery Address *</label>
-            <textarea id="address" rows="3" placeholder="House / street / area / landmark"></textarea>
+            <textarea id="address" rows="3" placeholder="House/Flat No, Street, Area, Landmark"></textarea>
           </div>
 
           <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 20px;">
             <div class="form-group">
               <label for="city">City *</label>
-              <input id="city" type="text" placeholder="City">
+              <input id="city" type="text" placeholder="e.g. Chennai">
             </div>
             <div class="form-group">
               <label for="pincode">Pin Code *</label>
-              <input id="pincode" type="text" placeholder="6-digit pin code">
+              <input id="pincode" type="text" placeholder="6-digit PIN">
             </div>
           </div>
 
           <!-- UPI Payment Details -->
           <div class="upi-container">
-            <h3 style="font-size: 16px; color: var(--brand-green); margin-bottom: 8px;">Pay via UPI</h3>
+            <h3 style="font-size: 16px; color: var(--brand-green); margin-bottom: 8px;">Pay via UPI (GPay / PhonePe / Paytm / BHIM)</h3>
             <div id="order-id-display" style="font-size: 13.5px; font-weight: 700; color: var(--brand-green); margin-bottom: 16px; display: inline-block; background: var(--brand-green-light); padding: 4px 12px; border-radius: 20px;">Order ID: LIYA-XXXXX</div>
             <p style="font-size: 13.5px; color: var(--ink-light); margin-bottom: 16px; line-height: 1.5;">
-              Scan the QR code or copy the UPI ID below to pay the exact order total. Once completed, tick the verification box to submit your order on WhatsApp.
+              Scan the QR code below or click <strong>Pay with UPI App</strong> if on mobile. Once payment is made, tick the confirmation box below to place your order on WhatsApp.
             </p>
             <div class="upi-flex">
-              <div class="upi-qr-box" style="width: 110px; height: 110px; background-color: var(--white); border: 1px solid var(--paper-alt-2); border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 6px;">
+              <div class="upi-qr-box">
                 <!-- Dynamically loaded QR Code -->
               </div>
               <div>
                 <div class="upi-id-box" id="upi-id-val">8110021313@kotakbank</div>
-                <div style="font-size: 13px; color: var(--ink-light);">UPI ID: 8110021313@kotakbank</div>
-                <button type="button" class="upi-copy-btn" id="copy-upi">Copy UPI ID</button>
+                <div style="font-size: 13px; color: var(--ink-light);">Kotak Mahindra Bank · VISALI D</div>
+                <div class="upi-btn-group">
+                  <button type="button" class="upi-copy-btn" id="copy-upi">📋 Copy UPI ID</button>
+                  <a href="#" id="upi-app-link" class="upi-copy-btn upi-pay-app-btn">⚡ Open in UPI App</a>
+                </div>
               </div>
             </div>
             
@@ -178,17 +202,21 @@
               <input type="checkbox" id="paid-check">
               <span>I have paid the exact amount via UPI</span>
             </label>
-            <div style="font-size: 11px; color: var(--ink-light); margin-top: 12px; font-style: italic;">
-              * Note: Real QR code can be updated here based on payment settings.
+            <div style="font-size: 11.5px; color: var(--ink-light); margin-top: 10px; font-style: italic;">
+              Need Cash On Delivery (COD) or bank transfer? Reach us directly on WhatsApp (+91 81100 21313).
             </div>
-          </div>
-        </div>
+        <!-- Recent Orders History (shows if user has previous orders recorded) -->
+        <div id="recent-orders-container" style="margin-top: 32px; display: none;"></div>
       </div>
 
       <!-- Right Column: Summary & Checkout CTA -->
       <div>
         <div class="cart-summary">
           <h3>Order Summary</h3>
+
+          <!-- Free Shipping Progress Meter -->
+          <div id="cart-shipping-meter" style="margin-bottom: 16px;"></div>
+
           <div id="summary-lines" style="border-bottom: 1px solid var(--paper-alt-2); padding-bottom: 16px; margin-bottom: 16px;">
             <!-- Loaded dynamically -->
           </div>
@@ -199,11 +227,11 @@
           </div>
           <div class="summary-row">
             <span>Shipping</span>
-            <span style="font-weight: 600; color: var(--brand-green);">Confirmed on WhatsApp</span>
+            <span id="sum-shipping" style="font-weight: 600; color: var(--brand-green);">Free in TN on ₹499+</span>
           </div>
 
           <div class="summary-row total">
-            <span>Total</span>
+            <span>Total to Pay</span>
             <span id="sum-total">₹0</span>
           </div>
 
@@ -213,12 +241,41 @@
           </button>
           
           <div id="wa-note" style="font-size: 13px; color: var(--ink-light); margin-top: 12px; text-align: center; line-height: 1.4;">
-            Fill in your details and tick "I've paid" above to enable this.
+            Fill in your details and tick "I have paid" above to enable this.
+          </div>
+
+          <!-- 48-Hour Guarantee Note -->
+          <div style="background: var(--paper-alt); border-radius: 8px; padding: 14px; margin-top: 16px; font-size: 12.5px; color: var(--ink-light); line-height: 1.5; border-left: 3px solid var(--brand-green);">
+            <strong style="color: var(--brand-green); display: block; margin-bottom: 3px;">🛡️ 48-Hour Freshness & Transit Guarantee</strong>
+            Orders are stone-ground fresh. If any packet arrives damaged, reach us on WhatsApp within 48 hours of delivery for a swift replacement or refund.
           </div>
         </div>
       </div>
     </div>
   </main>
+
+  <!-- Order Placed Success Confirmation Modal -->
+  <div class="order-modal" id="order-success-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="order-modal-content">
+      <div style="width: 64px; height: 64px; border-radius: 50%; background-color: var(--brand-green-light); color: var(--brand-green); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto; font-size: 32px;">
+        ✓
+      </div>
+      <h2 style="font-size: 24px; color: var(--brand-green); margin-bottom: 8px;">Order Placed Successfully!</h2>
+      <div id="modal-order-id" style="font-weight: 700; color: var(--ink); margin-bottom: 12px; font-size: 15px;">Order ID: LIYA-XXXXX</div>
+      <p style="font-size: 14.5px; color: var(--ink-light); line-height: 1.6; margin-bottom: 20px;">
+        Thank you! Your order details have been shared with our kitchen team via WhatsApp. We will pack your freshly stone-ground mixes right away.
+      </p>
+
+      <div id="modal-order-summary" style="background-color: var(--paper); border: 1px solid var(--paper-alt-2); border-radius: 12px; padding: 16px; text-align: left; font-size: 13.5px; color: var(--ink); margin-bottom: 24px;">
+        <!-- Filled dynamically -->
+      </div>
+
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <button class="btn btn-outline" onclick="window.print()" style="padding: 10px 18px; font-size: 13.5px;">🖨️ Print Receipt</button>
+        <button class="btn btn-primary" onclick="location.href='products.html'" style="padding: 10px 22px; font-size: 13.5px;">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer Section -->
   <footer id="contact">
@@ -244,19 +301,19 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
-            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="health.html">Health Benefits</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Customer Care</h4>
           <ul>
-            <li><a href="#">Shipping & Delivery</a></li>
+            <li><a href="shipping.html">Shipping & Delivery</a></li>
             <li><a href="refund-policy.html">Returns & Refunds</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="footer-col footer-contact">
@@ -284,20 +341,41 @@
     const mainNav = document.querySelector('.main-nav');
     if (menuToggle && mainNav) {
       menuToggle.addEventListener('click', () => {
-        mainNav.style.display = mainNav.style.display === 'flex' ? 'none' : 'flex';
-        mainNav.style.flexDirection = 'column';
-        mainNav.style.position = 'absolute';
-        mainNav.style.top = '100%';
-        mainNav.style.left = '0';
-        mainNav.style.right = '0';
-        mainNav.style.backgroundColor = 'var(--paper)';
-        mainNav.style.padding = '16px';
-        mainNav.style.borderBottom = '1px solid var(--line)';
-        mainNav.style.gap = '12px';
+        mainNav.classList.toggle('mobile-open');
       });
     }
 
     let currentOrderId = "";
+
+    // Save and load customer details
+    function loadCustomerDetails() {
+      try {
+        const raw = localStorage.getItem('liyas-customer-data');
+        if (raw) {
+          const data = JSON.parse(raw);
+          if (data.name) document.getElementById("name").value = data.name;
+          if (data.phone) document.getElementById("phone").value = data.phone;
+          if (data.email) document.getElementById("email").value = data.email;
+          if (data.address) document.getElementById("address").value = data.address;
+          if (data.city) document.getElementById("city").value = data.city;
+          if (data.pincode) document.getElementById("pincode").value = data.pincode;
+        }
+      } catch (e) {}
+    }
+
+    function saveCustomerDetails() {
+      try {
+        const data = {
+          name: document.getElementById("name").value.trim(),
+          phone: document.getElementById("phone").value.trim(),
+          email: document.getElementById("email").value.trim(),
+          address: document.getElementById("address").value.trim(),
+          city: document.getElementById("city").value.trim(),
+          pincode: document.getElementById("pincode").value.trim()
+        };
+        localStorage.setItem('liyas-customer-data', JSON.stringify(data));
+      } catch (e) {}
+    }
 
     // Render Shopping Cart Items
     function renderCart(){
@@ -306,24 +384,31 @@
       const summaryLinesEl = document.getElementById("summary-lines");
       const orderIdEl = document.getElementById("order-id-display");
       const qrBox = document.querySelector(".upi-qr-box");
+      const upiAppLink = document.getElementById("upi-app-link");
+      const shippingMeterEl = document.getElementById("cart-shipping-meter");
+      const checkoutFormContainer = document.getElementById("checkout-form-container");
 
       if (ids.length === 0){
         cartLinesEl.innerHTML = `
-          <div style="text-align: center; padding: 48px 0; color: var(--ink-light);">
-            <svg viewBox="0 0 24 24" style="width: 48px; height: 48px; fill: none; stroke: currentColor; stroke-width: 1.5; margin-bottom: 16px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-            <p style="font-size: 16px; margin-bottom: 20px;">Your cart is empty.</p>
-            <a href="products.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 13.5px;">Browse products</a>
+          <div style="text-align: center; padding: 48px 0; color: var(--ink-light); background: var(--white); border-radius: var(--radius); border: 1px dashed var(--paper-alt-2);">
+            <svg viewBox="0 0 24 24" style="width: 56px; height: 56px; fill: none; stroke: currentColor; stroke-width: 1.5; margin-bottom: 16px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <p style="font-size: 16px; margin-bottom: 20px;">Your cart is currently empty.</p>
+            <a href="products.html" class="btn btn-primary" style="padding: 10px 24px; font-size: 14px;">Browse Products</a>
           </div>`;
-        summaryLinesEl.innerHTML = "";
+        summaryLinesEl.innerHTML = "<p style='color: var(--ink-light); font-size: 14px;'>No items in order.</p>";
         document.getElementById("sum-subtotal").textContent = "₹0";
         document.getElementById("sum-total").textContent = "₹0";
+        if (shippingMeterEl) shippingMeterEl.innerHTML = "";
+        if (checkoutFormContainer) checkoutFormContainer.style.display = "none";
         
         if (orderIdEl) orderIdEl.style.display = "none";
-        if (qrBox) qrBox.innerHTML = "<!-- Empty Cart -->";
+        if (qrBox) qrBox.innerHTML = "";
         currentOrderId = "";
         checkWaButton();
         return;
       }
+
+      if (checkoutFormContainer) checkoutFormContainer.style.display = "block";
 
       // Generate order ID if it doesn't exist
       if (!currentOrderId) {
@@ -338,7 +423,8 @@
 
       let subtotal = 0;
       cartLinesEl.innerHTML = ids.map(id => {
-        const p = PRODUCTS.find(x => x.id === id);
+        const p = (typeof findProduct === "function") ? findProduct(id) : PRODUCTS.find(x => x.id === id || x.alias === id || x.groupId === id);
+        if (!p) return "";
         const qty = CART.items[id];
         const lineTotal = p.price * qty;
         subtotal += lineTotal;
@@ -366,7 +452,8 @@
       }).join("");
 
       summaryLinesEl.innerHTML = ids.map(id => {
-        const p = PRODUCTS.find(x => x.id === id);
+        const p = (typeof findProduct === "function") ? findProduct(id) : PRODUCTS.find(x => x.id === id || x.alias === id || x.groupId === id);
+        if (!p) return "";
         const qty = CART.items[id];
         return `<div class="summary-row"><span>${p.name} (${p.weight}) × ${qty}</span><span>₹${p.price * qty}</span></div>`;
       }).join("");
@@ -374,13 +461,37 @@
       document.getElementById("sum-subtotal").textContent = "₹" + subtotal;
       document.getElementById("sum-total").textContent = "₹" + subtotal;
 
-      // Update UPI QR Code dynamically with exact amount and order ID reference
+      // Free shipping calculation
+      const FREE_THRESHOLD = 499;
+      if (shippingMeterEl) {
+        const isFree = subtotal >= FREE_THRESHOLD;
+        const diff = Math.max(0, FREE_THRESHOLD - subtotal);
+        const pct = Math.min(100, Math.round((subtotal / FREE_THRESHOLD) * 100));
+        shippingMeterEl.innerHTML = `
+          <div class="shipping-meter">
+            <div class="shipping-meter-text">
+              <span>${isFree ? "🎉" : "🚚"}</span>
+              <span>${isFree ? "You have unlocked <b>FREE Delivery</b> across Tamil Nadu!" : `Add <b>₹${diff}</b> more to unlock <b>FREE Delivery</b>!`}</span>
+            </div>
+            <div class="shipping-meter-bar">
+              <div class="shipping-meter-fill" style="width: ${pct}%;"></div>
+            </div>
+          </div>
+        `;
+      }
+
+      // Update UPI QR Code and App Link dynamically
+      const pa = "8110021313@kotakbank";
+      const pn = "VISALI D";
+      const upiUrl = `upi://pay?pa=${pa}&pn=${encodeURIComponent(pn)}&am=${subtotal}.00&tn=${currentOrderId}&cu=INR`;
+      
       if (qrBox) {
-        const pa = "8110021313@kotakbank";
-        const pn = "VISALI D";
-        const upiUrl = `upi://pay?pa=${pa}&pn=${encodeURIComponent(pn)}&am=${subtotal}.00&tn=${currentOrderId}&cu=INR`;
         const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(upiUrl)}`;
         qrBox.innerHTML = `<img src="${qrUrl}" alt="UPI QR Code" style="width: 100%; height: 100%; object-fit: contain;">`;
+      }
+
+      if (upiAppLink) {
+        upiAppLink.href = upiUrl;
       }
 
       // Event listeners for quantites
@@ -392,7 +503,11 @@
       }));
       cartLinesEl.querySelectorAll("[data-qty-minus]").forEach(b => b.addEventListener("click", () => {
         const id = b.dataset.qtyMinus;
-        CART.items[id] = Math.max(1, CART.items[id] - 1);
+        if (CART.items[id] <= 1) {
+          delete CART.items[id];
+        } else {
+          CART.items[id] -= 1;
+        }
         saveCart();
         renderCart();
         updateCartBadge();
@@ -420,13 +535,19 @@
       
       document.getElementById("wa-confirm").disabled = !ready;
       document.getElementById("wa-note").innerHTML = ready
-        ? "You're all set. This opens WhatsApp with your order details pre-filled."
-        : `Fill in your details and tick <strong>"I have paid"</strong> above to enable this.`;
+        ? "You're all set! Click below to send your order directly to our kitchen on WhatsApp."
+        : `Fill in your delivery details and tick <strong>"I have paid"</strong> above to confirm.`;
     }
 
     // Input listeners
-    ["name","phone","address","city","pincode"].forEach(id => {
-      document.getElementById(id).addEventListener("input", checkWaButton);
+    ["name","phone","email","address","city","pincode"].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener("input", () => {
+          checkWaButton();
+          saveCustomerDetails();
+        });
+      }
     });
     document.getElementById("paid-check").addEventListener("change", checkWaButton);
 
@@ -436,7 +557,7 @@
       showToast("UPI ID copied!");
     });
 
-    // Send order confirmation via WhatsApp
+    // Send order confirmation via WhatsApp & Show Success Modal
     document.getElementById("wa-confirm").addEventListener("click", () => {
       const name = document.getElementById("name").value.trim();
       const phone = document.getElementById("phone").value.trim();
@@ -445,23 +566,141 @@
       const pincode = document.getElementById("pincode").value.trim();
       const ids = Object.keys(CART.items);
       const lines = ids.map(id => {
-        const p = PRODUCTS.find(x => x.id === id);
-        return `• ${p.name} (${p.weight}) x${CART.items[id]} (₹${p.price * CART.items[id]})`;
+        const p = (typeof findProduct === "function") ? findProduct(id) : PRODUCTS.find(x => x.id === id || x.alias === id || x.groupId === id);
+        const pName = p ? p.name : id;
+        const pWeight = p ? p.weight : "";
+        const pPrice = p ? p.price : 0;
+        const q = CART.items[id];
+        return `• ${pName} (${pWeight}) x${q} (₹${pPrice * q})`;
       }).join("%0A");
       const total = document.getElementById("sum-total").textContent;
-      const msg = `Hi Liya's Homemade, I've placed an order (Order ID: ${currentOrderId}) and paid via UPI:%0A%0AOrder ID: ${currentOrderId}%0APayment Amount: ${total}%0A%0AItems:%0A${lines}%0A%0ADelivery Address:%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}, ${city} - ${pincode}`;
+      const placedOrderId = currentOrderId;
+      const msg = `Hi Liya's Homemade, I've placed an order (Order ID: ${placedOrderId}) and paid via UPI:%0A%0AOrder ID: ${placedOrderId}%0APayment Amount: ${total}%0A%0AItems:%0A${lines}%0A%0ADelivery Address:%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}, ${city} - ${pincode}`;
       
+      // Save order record to browser localStorage history so it is never lost
+      try {
+        const orderRecord = {
+          orderId: placedOrderId,
+          timestamp: new Date().toISOString(),
+          dateString: new Date().toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" }),
+          customer: { name, phone, address, city, pincode },
+          items: ids.map(id => {
+            const p = (typeof findProduct === "function") ? findProduct(id) : PRODUCTS.find(x => x.id === id || x.alias === id || x.groupId === id);
+            return {
+              id,
+              name: p ? p.name : id,
+              weight: p ? p.weight : "",
+              price: p ? p.price : 0,
+              quantity: CART.items[id]
+            };
+          }),
+          total: total,
+          whatsappUrl: `https://wa.me/918110021313?text=${msg}`
+        };
+
+        const existing = JSON.parse(localStorage.getItem("liya_orders_history") || "[]");
+        existing.unshift(orderRecord);
+        localStorage.setItem("liya_orders_history", JSON.stringify(existing.slice(0, 20)));
+      } catch (e) {
+        console.error("Order history storage error:", e);
+      }
+
+      // Open WhatsApp
       window.open(`https://wa.me/918110021313?text=${msg}`, "_blank");
+
+      // Show Success Modal
+      const modal = document.getElementById("order-success-modal");
+      const modalOrderId = document.getElementById("modal-order-id");
+      const modalSummary = document.getElementById("modal-order-summary");
+
+      if (modal && modalOrderId && modalSummary) {
+        modalOrderId.textContent = `Order Reference: ${placedOrderId}`;
+        modalSummary.innerHTML = `
+          <div style="font-weight: 700; margin-bottom: 8px; border-bottom: 1px solid var(--paper-alt-2); padding-bottom: 4px;">Items Ordered:</div>
+          <ul style="list-style: none; margin-bottom: 12px; padding: 0;">
+            ${ids.map(id => {
+              const p = (typeof findProduct === "function") ? findProduct(id) : PRODUCTS.find(x => x.id === id || x.alias === id || x.groupId === id);
+              const pName = p ? p.name : id;
+              const pWeight = p ? p.weight : "";
+              const pPrice = p ? p.price : 0;
+              const q = CART.items[id];
+              return `<li style="display:flex; justify-content:space-between; margin-bottom: 4px;"><span>${pName} (${pWeight}) × ${q}</span><b>₹${pPrice * q}</b></li>`;
+            }).join("")}
+          </ul>
+          <div style="display:flex; justify-content:space-between; font-weight: 700; border-top: 1px solid var(--paper-alt-2); padding-top: 6px; margin-bottom: 10px;">
+            <span>Total Paid (UPI):</span>
+            <span style="color:var(--brand-green);">${total}</span>
+          </div>
+          <div style="font-size: 12.5px; color: var(--ink-light);">
+            <b>Delivering to:</b> ${name}, ${address}, ${city} - ${pincode} (Ph: ${phone})
+          </div>
+        `;
+        modal.classList.add("show");
+      }
       
-      // Reset
+      // Clear cart
       currentOrderId = "";
       CART.items = {};
       saveCart();
-      renderCart();
       updateCartBadge();
+      renderRecentOrders();
     });
 
+    // Render Past Order History
+    function renderRecentOrders() {
+      const container = document.getElementById("recent-orders-container");
+      if (!container) return;
+
+      let history = [];
+      try {
+        history = JSON.parse(localStorage.getItem("liya_orders_history") || "[]");
+      } catch (e) {
+        history = [];
+      }
+
+      if (!history || history.length === 0) {
+        container.style.display = "none";
+        return;
+      }
+
+      container.style.display = "block";
+      container.innerHTML = `
+        <div style="background-color: var(--white); border: 1px solid var(--paper-alt-2); border-radius: var(--radius); padding: 24px; box-shadow: 0 4px 16px rgba(47, 64, 37, 0.03);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 16px;">
+            <h3 style="font-size: 18px; color: var(--brand-green); display: flex; align-items: center; gap: 8px;">
+              <span>📦</span> Your Recent Orders
+            </h3>
+            <span style="font-size: 12.5px; color: var(--ink-light);">${history.length} saved order(s)</span>
+          </div>
+          <div style="display:flex; flex-direction:column; gap: 14px;">
+            ${history.map(ord => `
+              <div style="background: var(--paper); border: 1px solid var(--paper-alt-2); border-radius: 8px; padding: 14px 18px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap: 8px; margin-bottom: 8px;">
+                  <div>
+                    <strong style="color: var(--brand-green); font-size: 14px;">${ord.orderId}</strong>
+                    <span style="font-size: 12px; color: var(--ink-light); margin-left: 8px;">${ord.dateString || ""}</span>
+                  </div>
+                  <span style="font-weight: 700; color: var(--brand-green);">${ord.total}</span>
+                </div>
+                <div style="font-size: 13px; color: var(--ink-light); margin-bottom: 10px;">
+                  ${ord.items.map(it => `${it.name} (${it.weight}) × ${it.quantity}`).join(" • ")}
+                </div>
+                <div style="display:flex; justify-content:flex-end;">
+                  <a href="${ord.whatsappUrl || '#'}" target="_blank" rel="noopener" class="btn btn-outline" style="padding: 6px 12px; font-size: 12px; border-radius: 20px;">
+                    💬 Open WhatsApp Chat
+                  </a>
+                </div>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      `;
+    }
+
+    // Initialize
+    loadCustomerDetails();
     renderCart();
+    renderRecentOrders();
   </script>
 </body>
 </html>

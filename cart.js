@@ -179,6 +179,14 @@ function renderCartDrawer() {
   const ids = Object.keys(CART.items);
   let subtotal = 0;
   
+  // Calculate subtotal first
+  ids.forEach(id => {
+    const p = (typeof findProduct === "function") ? findProduct(id) : PRODUCTS.find(x => x.id === id || x.alias === id || x.groupId === id);
+    if (p) {
+      subtotal += p.price * (CART.items[id] || 0);
+    }
+  });
+
   // 1. Header
   let html = `
     <div class="cart-drawer-header">
@@ -186,6 +194,27 @@ function renderCartDrawer() {
       <button class="cart-drawer-close" onclick="toggleCartDrawer(false)" aria-label="Close cart drawer">&times;</button>
     </div>
   `;
+
+  // Free shipping meter
+  if (ids.length > 0) {
+    const FREE_THRESHOLD = 499;
+    const isFree = subtotal >= FREE_THRESHOLD;
+    const diff = Math.max(0, FREE_THRESHOLD - subtotal);
+    const pct = Math.min(100, Math.round((subtotal / FREE_THRESHOLD) * 100));
+    html += `
+      <div style="padding: 12px 24px 0 24px;">
+        <div class="shipping-meter">
+          <div class="shipping-meter-text">
+            <span>${isFree ? "🎉" : "🚚"}</span>
+            <span>${isFree ? "You have unlocked <b>FREE Shipping</b> across Tamil Nadu!" : `Add <b>₹${diff}</b> more to unlock <b>FREE Delivery</b>!`}</span>
+          </div>
+          <div class="shipping-meter-bar">
+            <div class="shipping-meter-fill" style="width: ${pct}%;"></div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
 
   // 2. Items List
   html += `<div class="cart-drawer-items">`;
@@ -202,11 +231,10 @@ function renderCartDrawer() {
     `;
   } else {
     ids.forEach(id => {
-      const p = PRODUCTS.find(x => x.id === id);
+      const p = (typeof findProduct === "function") ? findProduct(id) : PRODUCTS.find(x => x.id === id || x.alias === id || x.groupId === id);
       if (!p) return;
       const qty = CART.items[id];
       const lineTotal = p.price * qty;
-      subtotal += lineTotal;
       html += `
         <div class="cart-drawer-item">
           <div class="cart-drawer-item-img">
@@ -262,7 +290,7 @@ function renderCartDrawer() {
           <span>Subtotal</span>
           <span class="total-price">₹${subtotal}</span>
         </div>
-        <p class="cart-drawer-tax-disclaimer">Taxes and shipping calculated at checkout</p>
+        <p class="cart-drawer-tax-disclaimer">Taxes and shipping confirmed on checkout</p>
         <div class="cart-drawer-actions">
           <button class="btn btn-outline" onclick="location.href='cart.html'">View Cart</button>
           <button class="btn btn-primary" onclick="location.href='cart.html'">Check out</button>
@@ -276,7 +304,7 @@ function renderCartDrawer() {
 
 // Click listener to intercept cart button actions globally
 document.addEventListener("click", (e) => {
-  const cartBtn = e.target.closest(".cart-btn");
+  const cartBtn = e.target.closest(".cart-btn, .btn-gold-cart");
   if (cartBtn) {
     if (window.location.pathname.endsWith("cart.html")) {
       return; // allow normal page load on checkout page
@@ -291,5 +319,40 @@ document.addEventListener("DOMContentLoaded", () => {
   injectCartDrawer();
   updateCartBadge();
   updateAllCartControls();
+
+  // 1. Sticky header logo shrink on scroll
+  const header = document.querySelector("header");
+  if (header) {
+    const handleScroll = () => {
+      if (window.scrollY > 40) {
+        header.classList.add("header-scrolled");
+      } else {
+        header.classList.remove("header-scrolled");
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+  }
+
+  // 2. Global Mobile Nav toggle with outside-click and Escape key support
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mainNav = document.querySelector(".main-nav");
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      mainNav.classList.toggle("mobile-open");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
+        mainNav.classList.remove("mobile-open");
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        mainNav.classList.remove("mobile-open");
+      }
+    });
+  }
 });
-updateCartBadge();

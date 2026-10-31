@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title id="page-title">Product Details | Liya's Homemade</title>
+  <link rel="icon" type="image/png" href="logo.png">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
   <!-- Top Announcement Bar -->
   <div class="announce">
-    Hand-ground weekly <span class="dot">•</span> Zero preservatives <span class="dot">•</span> Ships across India
+    Hand-ground weekly <span class="dot">•</span> Zero preservatives <span class="dot">•</span> Free TN Delivery on ₹499+ <span class="dot">•</span> Pan-India Courier
   </div>
 
   <!-- Header Section -->
@@ -21,18 +22,18 @@
         <span>Liya's Homemade</span>
       </a>
       
-      <span class="kitchen-badge">From our kitchen, to yours</span>
+      <span class="kitchen-badge">Wholesome by nature, homemade by choice</span>
 
       <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
-        <a href="index.html#about">About Us</a>
+        <a href="about.html">About Us</a>
         <a href="health.html">Health Benefits</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
 
       <div class="header-actions">
-        <button class="cart-btn" onclick="location.href='cart.html'" aria-label="View Shopping Cart">
+        <button class="cart-btn" aria-label="View Shopping Cart">
           <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.06 1.4-2.54h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
           Cart - <span data-cart-count>0</span>
         </button>
@@ -90,19 +91,19 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
-            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="health.html">Health Benefits</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Customer Care</h4>
           <ul>
-            <li><a href="#">Shipping & Delivery</a></li>
+            <li><a href="shipping.html">Shipping & Delivery</a></li>
             <li><a href="refund-policy.html">Returns & Refunds</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="footer-col footer-contact">
@@ -143,23 +144,14 @@
     const mainNav = document.querySelector('.main-nav');
     if (menuToggle && mainNav) {
       menuToggle.addEventListener('click', () => {
-        mainNav.style.display = mainNav.style.display === 'flex' ? 'none' : 'flex';
-        mainNav.style.flexDirection = 'column';
-        mainNav.style.position = 'absolute';
-        mainNav.style.top = '100%';
-        mainNav.style.left = '0';
-        mainNav.style.right = '0';
-        mainNav.style.backgroundColor = 'var(--paper)';
-        mainNav.style.padding = '16px';
-        mainNav.style.borderBottom = '1px solid var(--line)';
-        mainNav.style.gap = '12px';
+        mainNav.classList.toggle('mobile-open');
       });
     }
 
     // Get product ID from URL query parameters
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id") || PRODUCTS[0].id;
-    const p = PRODUCTS.find(x => x.id === id) || PRODUCTS[0];
+    const p = (typeof findProduct === "function" ? findProduct(id) : PRODUCTS.find(x => x.id === id || x.alias === id || x.groupId === id)) || PRODUCTS[0];
 
     // Set page titles and breadcrumbs
     document.getElementById("page-title").textContent = p.name + " | Liya's Homemade";
@@ -282,6 +274,7 @@
           <button data-tab="ingredients">Ingredients</button>
           <button data-tab="benefits">Health Benefits</button>
           <button data-tab="dishes">What You Can Make</button>
+          <button data-tab="reviews">Reviews (${p.reviews || 25})</button>
         </div>
 
         <!-- Tab Panels -->
@@ -319,6 +312,27 @@
           <ul class="dish-list">
             ${p.dishes.map(d => `<li>${checkSvg}${d}</li>`).join("")}
           </ul>
+        </div>
+
+        <div class="tab-panel" data-panel="reviews">
+          ${p.featuredReview ? `
+            <div style="background: #FAF5ED; border: 1px solid var(--warm-gold); border-left: 5px solid var(--warm-gold); padding: 22px; border-radius: 12px; margin-bottom: 20px;">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                <span style="font-size: 16px;">${p.featuredReview.stars}</span>
+                <span style="font-size: 12px; font-weight: 700; background: #eef7f0; color: var(--brand-green); padding: 2px 8px; border-radius: 4px;">✓ Verified Customer Purchase</span>
+              </div>
+              <p style="font-size: 15px; line-height: 1.6; color: var(--text-dark); margin-bottom: 10px;">"${p.featuredReview.quote}"</p>
+              <span style="font-weight: 700; font-size: 13.5px; color: var(--text-muted);">${p.featuredReview.author}</span>
+            </div>
+          ` : ''}
+          <div style="background: white; border: 1px solid var(--border); border-radius: 12px; padding: 20px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+              <span style="color: #F1C40F; font-size: 16px;">★★★★★</span>
+              <span style="font-size: 12px; font-weight: 700; background: #eef7f0; color: var(--brand-green); padding: 2px 8px; border-radius: 4px;">✓ Verified Customer Purchase</span>
+            </div>
+            <p style="font-size: 14.5px; color: var(--text-dark); line-height: 1.6; margin-bottom: 8px;">"The quality and aroma of this freshly ground batch is outstanding. Zero additives and genuine stone-ground texture. Will definitely reorder!"</p>
+            <span style="font-size: 13px; color: var(--text-muted); font-weight: 600;">— Sangeetha M., Chennai</span>
+          </div>
         </div>
       </div>
     `;

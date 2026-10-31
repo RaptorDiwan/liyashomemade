@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Refund Policy | Liya's Homemade</title>
+  <link rel="icon" type="image/png" href="logo.png">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
   <!-- Top Announcement Bar -->
   <div class="announce">
-    Hand-ground weekly <span class="dot">•</span> Zero preservatives <span class="dot">•</span> Ships across India
+    Hand-ground weekly <span class="dot">•</span> Zero preservatives <span class="dot">•</span> Free TN Delivery on ₹499+ <span class="dot">•</span> Pan-India Courier
   </div>
 
   <!-- Header Section -->
@@ -21,18 +22,18 @@
         <span>Liya's Homemade</span>
       </a>
       
-      <span class="kitchen-badge">From our kitchen, to yours</span>
+      <span class="kitchen-badge">Wholesome by nature, homemade by choice</span>
 
       <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
-        <a href="index.html#about">About Us</a>
+        <a href="about.html">About Us</a>
         <a href="health.html">Health Benefits</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
 
       <div class="header-actions">
-        <button class="cart-btn" onclick="location.href='cart.html'" aria-label="View Shopping Cart">
+        <button class="cart-btn" aria-label="View Shopping Cart">
           <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.06 1.4-2.54h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
           Cart - <span data-cart-count>0</span>
         </button>
@@ -95,20 +96,19 @@
         <section id="reporting">
           <h2>Reporting Time & Required Proof</h2>
           <div class="policy-alert warning">
-            <strong>⚠️ Reporting Window:</strong> Any issue must be reported to <strong>Liya's Homemade</strong> within <strong>12 hours</strong> of delivery.
+            <strong>⏱️ Reporting Window:</strong> Any transit issue, leakage, or defect must be reported to <strong>Liya's Homemade</strong> within <strong>48 hours</strong> of delivery.
           </div>
           
-          <p>To help us investigate quickly, customers must share the following details:</p>
+          <p>To help our kitchen team investigate quickly and issue a swift replacement or refund, please share the following via WhatsApp:</p>
           <ul class="policy-list">
-            <li>Order number</li>
-            <li>Product name</li>
-            <li>Clear photos of the product and outer package</li>
-            <li><strong>Mandatory unboxing video</strong></li>
+            <li>Order ID (e.g., LIYA-XXXXX)</li>
+            <li>Product name & pack size</li>
+            <li>Clear photos or a brief video of the affected pouches and outer courier package with the shipping label</li>
             <li>Short description of the issue</li>
           </ul>
 
-          <div class="policy-alert danger">
-            <strong>Mandatory Unboxing Video:</strong> An unboxing video is mandatory for the refund process. Refund requests will be considered only if a clear unboxing video is shared at the time of raising the complaint. Requests made without an unboxing video will not be eligible for refund.
+          <div class="policy-card" style="background: var(--brand-green-light); border-left: 4px solid var(--brand-green); padding: 14px 18px; border-radius: 8px; margin-top: 14px;">
+            <strong style="color: var(--brand-green);">💡 Smooth Resolution Guarantee:</strong> Providing clear photos or a short video helps us verify the carrier damage immediately and dispatch a free replacement or process your UPI refund within 24 business hours.
           </div>
         </section>
 
@@ -202,19 +202,19 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
-            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="health.html">Health Benefits</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Customer Care</h4>
           <ul>
-            <li><a href="#">Shipping & Delivery</a></li>
+            <li><a href="shipping.html">Shipping & Delivery</a></li>
             <li><a href="refund-policy.html">Returns & Refunds</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="footer-col footer-contact">
@@ -247,16 +247,7 @@
     const mainNav = document.querySelector('.main-nav');
     if (menuToggle && mainNav) {
       menuToggle.addEventListener('click', () => {
-        mainNav.style.display = mainNav.style.display === 'flex' ? 'none' : 'flex';
-        mainNav.style.flexDirection = 'column';
-        mainNav.style.position = 'absolute';
-        mainNav.style.top = '100%';
-        mainNav.style.left = '0';
-        mainNav.style.right = '0';
-        mainNav.style.backgroundColor = 'var(--paper)';
-        mainNav.style.padding = '16px';
-        mainNav.style.borderBottom = '1px solid var(--line)';
-        mainNav.style.gap = '12px';
+        mainNav.classList.toggle('mobile-open');
       });
     }
 

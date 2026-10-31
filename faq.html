@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions | Liya's Homemade</title>
+  <meta name="description" content="Find answers to common questions about Liya's Homemade health mixes, stone-grinding process, baby food guidance, shelf life, and shipping.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announce">
+    Hand-ground weekly <span class="dot">•</span> Zero preservatives <span class="dot">•</span> Free TN Delivery on ₹499+ <span class="dot">•</span> Pan-India Courier
+  </div>
+
+  <!-- Header Section -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Liya's Homemade Logo" class="logo-img">
+        <span>Liya's Homemade</span>
+      </a>
+      
+      <span class="kitchen-badge">Wholesome by nature, homemade by choice</span>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="health.html">Health Benefits</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn" aria-label="View Shopping Cart">
+          <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.06 1.4-2.54h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+          Cart - <span data-cart-count>0</span>
+        </button>
+        <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- FAQ Section -->
+  <main class="wrap" style="padding-top: 50px; padding-bottom: 80px;">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> <span class="sep">&rarr;</span>
+      <span class="current">FAQs</span>
+    </div>
+
+    <!-- Header -->
+    <div class="static-page-header">
+      <h1>Frequently Asked Questions</h1>
+      <p>
+        Everything you need to know about how our mixes are made, how to prepare them for your family, and how we ship them fresh across India.
+      </p>
+    </div>
+
+    <!-- Search FAQs -->
+    <div class="faq-search-box">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="faq-search" placeholder="Type a question or keyword (e.g. baby, expiry, boiling, delivery)...">
+    </div>
+
+    <!-- FAQ Category Tabs -->
+    <div class="faq-category-nav" id="faq-category-pills">
+      <button type="button" class="filter-pill active" data-cat="all">All Questions</button>
+      <button type="button" class="filter-pill" data-cat="ingredients">Ingredients & Purity</button>
+      <button type="button" class="filter-pill" data-cat="baby">Baby Food & Age</button>
+      <button type="button" class="filter-pill" data-cat="cooking">Preparation & Recipes</button>
+      <button type="button" class="filter-pill" data-cat="shipping">Orders, UPI & Delivery</button>
+      <button type="button" class="filter-pill" data-cat="storage">Shelf Life & Storage</button>
+    </div>
+
+    <!-- FAQ Accordion Container -->
+    <div id="faq-container" style="max-width: 820px; margin: 0 auto;">
+      <!-- Group: Ingredients & Purity -->
+      <div class="faq-group" data-category="ingredients">
+        <div class="faq-group-title">🌱 Ingredients & Pure Quality</div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            Are there any preservatives, added sugars, or chemicals in your mixes?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <strong>Absolutely zero.</strong> We do not add any preservatives, chemical stabilizers, artificial flavors, white sugar, or milk powder. Every pouch contains 100% whole grains, pulses, nuts, and traditional spices, roasted and ground fresh. What you see on our ingredients list is all that is inside.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Why do you stone-grind instead of using factory pulverizers?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              High-speed commercial steel mills run at high RPMs, generating intense heat that burns away natural oils, vitamins, and the delicate aroma of grains. Traditional stone-grinding runs at a slow, gentle speed, keeping the flour cool and preserving dietary fiber, healthy fats, and authentic paati-style taste.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Are your grains washed before grinding?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes, thoroughly. Every single batch is hand-sorted to remove grit and stones, washed multiple times in clean potable water, and sun-dried in clean, hygienic surroundings before dry-roasting.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group: Baby Food & Age Guidance -->
+      <div class="faq-group" data-category="baby">
+        <div class="faq-group-title">👶 Baby Food & Toddler Guidance</div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            From which month can I introduce Baby Instant Health Mix?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Our <strong>Baby Instant Health Mix</strong> and <strong>Baby Rice Cereal</strong> are formulated to be gentle enough for babies starting from <strong>6 months of age</strong> (once your baby has begun solid foods). The ingredients (badam, cashew, fried gram dal, makhana, white poha, red poha) are carefully roasted and stone-ground to an ultra-fine powder so tiny tummies digest them smoothly.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I cook Baby Instant Health Mix for my 6-8 month old infant?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Take 1 to 2 tablespoons of Baby Instant Health Mix in a small pan. Add 1 cup of cold water or diluted milk and stir well without lumps. Place on low flame and cook for 3 to 5 minutes, stirring continuously until it turns into a smooth, silky porridge. You can sweeten it lightly with pure jaggery syrup or mashed banana. Allow it to cool to lukewarm before feeding.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Does Baby Instant Health Mix help in healthy weight gain?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes! Because it contains premium nutrient-dense ingredients like almonds, cashews, makhana (foxnuts), and red poha, it provides healthy vegetarian fats, plant protein, and clean calories that support steady weight gain and brain development naturally.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group: Preparation & Recipes -->
+      <div class="faq-group" data-category="cooking">
+        <div class="faq-group-title">🥣 Preparation & How to Cook</div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I make a morning health porridge (Kanji) with Multigrain Health Mix?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Mix 2 tablespoons of Multigrain Health Mix in 1 cup of room-temperature water or milk. Dissolve all lumps first. Cook on medium heat for 4-5 minutes while stirring. Turn off heat. Add milk and a pinch of country sugar/palm jaggery for sweet porridge, or mix with buttermilk, salt, and a pinch of jeera for a savory cooling morning drink.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What can I make with Black Ulundhu (Urad Dal) Mix?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Our dry-roasted Black Ulundhu mix is primarily crafted for making authentic <strong>Ulundhu Kali</strong> (cooked with palm jaggery and gingelly/sesame oil) to strengthen the lower back and joints. You can also prepare nourishing Ulundhu Kanji (sweet or salty) or roll it into instant healthy ladoos with ghee and nuts.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How is Multi Grain Aata used compared to regular wheat flour?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              You use it exactly like your daily roti flour! Knead with warm water and let the dough rest for 15-20 minutes. It rolls out effortlessly into soft, fluffy phulkas, nutritious rotis, or parathas, offering rich dietary fiber and natural plant protein from wholesome whole grains.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group: Orders, UPI & Delivery -->
+      <div class="faq-group" data-category="shipping">
+        <div class="faq-group-title">📦 Ordering, UPI Payment & Delivery</div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I pay and complete my order?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              When you proceed to the cart, a dynamic UPI QR Code and payment button will appear with your exact total and generated Order ID. You can scan with Google Pay, PhonePe, Paytm, or BHIM, or tap "Open in UPI App". Once paid, tick "I have paid" and click "Confirm on WhatsApp". This immediately sends your order to our kitchen team so we pack your order without delay!
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How many days does delivery take?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <ul>
+                <li><strong>Chennai:</strong> 1 - 2 business days</li>
+                <li><strong>Tamil Nadu (Rest):</strong> 2 - 3 business days</li>
+                <li><strong>South India (Bangalore, Hyderabad, Kerala):</strong> 3 - 4 business days</li>
+                <li><strong>Rest of India:</strong> 4 - 6 business days</li>
+              </ul>
+              All orders are dispatched within 24 hours of receiving the fresh weekly grind.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you offer Cash On Delivery (COD)?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Because we grind and pack fresh perishables in small batches, our primary payment mode is direct UPI. However, if you require COD for a specific location in Tamil Nadu, simply message us on WhatsApp (+91 81100 21313) and we will assist you.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group: Shelf Life & Storage -->
+      <div class="faq-group" data-category="storage">
+        <div class="faq-group-title">🏷️ Shelf Life & Proper Storage</div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What is the shelf life of Liya's Homemade mixes?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Because our mixes are 100% natural and contain zero preservatives or chemical extenders, the recommended shelf life is <strong>3 to 4 months</strong> at room temperature in an airtight container, and up to <strong>6 months if refrigerated</strong>. Always use a dry spoon.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How should I store the pouches after opening?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Our pouches come with an airtight resealable zip-lock. After taking the required powder, press out excess air and seal the zip firmly. Alternatively, transfer the powder into a clean, dry glass or stainless steel container kept away from moisture and direct sunlight.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Help Banner -->
+    <div style="text-align: center; background-color: var(--brand-green-light); border: 1px dashed var(--brand-green); border-radius: var(--radius); padding: 36px 24px; max-width: 820px; margin: 48px auto 0 auto;">
+      <h3 style="font-size: 20px; color: var(--brand-green); margin-bottom: 8px;">Still have a question?</h3>
+      <p style="font-size: 14.5px; color: var(--ink-light); margin-bottom: 20px;">
+        We are happy to answer any questions about our ingredients, recipes, or suitability for your family.
+      </p>
+      <a href="https://wa.me/918110021313?text=Hi%20Liya's%20Homemade,%20I%20have%20a%20question%20about%20your%20mixes" target="_blank" rel="noopener" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+        <span>💬</span> Chat with Us on WhatsApp
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer id="contact">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color: white;">
+            <img src="logo.png" alt="Liya's Homemade Logo" class="logo-img" style="border-color: rgba(255,255,255,0.2);">
+            <span>Liya's Homemade</span>
+          </a>
+          <p>Traditional goodness, made with love. Wholesome by nature, homemade by choice.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/liyashomemade/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://wa.me/918110021313" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.517 2.266 2.27 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.665.989 3.3 1.472 5.358 1.473 5.432 0 9.851-4.387 9.855-9.782.002-2.614-1.013-5.074-2.859-6.927C17.078 2.062 14.62 1.045 12.01 1.045c-5.444 0-9.866 4.39-9.87 9.786-.002 2.08.547 4.11 1.588 5.91l-.26.953-.943 3.44 3.535-.927.988.597zm11.215-4.595c-.3-.15-1.774-.875-2.048-.975-.274-.1-.474-.15-.674.15-.2.3-1.774 2.225-1.774 2.225s-.2.2-.55.05c-.35-.175-1.479-.545-2.818-1.739-1.042-.93-1.745-2.08-1.95-2.43-.2-.35-.02-.54.155-.715.16-.16.35-.4.525-.6.175-.2.24-.35.35-.58.115-.23.06-.43-.03-.63-.09-.2-.674-1.625-.925-2.225-.244-.588-.493-.51-.674-.52-.172-.01-.37-.01-.57-.01-.2 0-.525.075-.8.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.22 5.12 4.52 3.01 1.3 3.01.866 3.56.816.55-.05 1.775-.725 2.025-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="health.html">Health Benefits</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="shipping.html">Shipping & Delivery</a></li>
+            <li><a href="refund-policy.html">Returns & Refunds</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Get in touch</h4>
+          <p><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.149 15.149 0 0 0 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> +91 81100 21313</p>
+          <p><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> liyashomemade@gmail.com</p>
+          <p><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Chennai, Tamilnadu</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Liya's Homemade. All rights reserved.</span>
+        <span>Made with care, packed by hand.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a class="wa-float" href="https://wa.me/918110021313" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.517 2.266 2.27 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.665.989 3.3 1.472 5.358 1.473 5.432 0 9.851-4.387 9.855-9.782.002-2.614-1.013-5.074-2.859-6.927C17.078 2.062 14.62 1.045 12.01 1.045c-5.444 0-9.866 4.39-9.87 9.786-.002 2.08.547 4.11 1.588 5.91l-.26.953-.943 3.44 3.535-.927.988.597zm11.215-4.595c-.3-.15-1.774-.875-2.048-.975-.274-.1-.474-.15-.674.15-.2.3-1.774 2.225-1.774 2.225s-.2.2-.55.05c-.35-.175-1.479-.545-2.818-1.739-1.042-.93-1.745-2.08-1.95-2.43-.2-.35-.02-.54.155-.715.16-.16.35-.4.525-.6.175-.2.24-.35.35-.58.115-.23.06-.43-.03-.63-.09-.2-.674-1.625-.925-2.225-.244-.588-.493-.51-.674-.52-.172-.01-.37-.01-.57-.01-.2 0-.525.075-.8.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.22 5.12 4.52 3.01 1.3 3.01.866 3.56.816.55-.05 1.775-.725 2.025-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/></svg>
+  </a>
+
+  <!-- Shared Javascript Libraries -->
+  <script src="products.js"></script>
+  <script src="cart.js"></script>
+
+  <script>
+    // Toggle Mobile Navigation
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('mobile-open');
+      });
+    }
+
+    // Accordion toggle logic
+    document.querySelectorAll('.faq-question').forEach(questionBtn => {
+      questionBtn.addEventListener('click', () => {
+        const item = questionBtn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const isOpen = item.classList.contains('open');
+
+        // Close other items in the same group (optional, smooth experience)
+        item.parentElement.querySelectorAll('.faq-item').forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('open');
+            otherItem.querySelector('.faq-answer').style.maxHeight = null;
+          }
+        });
+
+        if (isOpen) {
+          item.classList.remove('open');
+          answer.style.maxHeight = null;
+        } else {
+          item.classList.add('open');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // Category Tabs Filter
+    const catPills = document.querySelectorAll('#faq-category-pills .filter-pill');
+    const faqGroups = document.querySelectorAll('.faq-group');
+
+    catPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        catPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const cat = pill.dataset.cat;
+
+        faqGroups.forEach(group => {
+          if (cat === 'all' || group.dataset.category === cat) {
+            group.style.display = 'block';
+          } else {
+            group.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Live search
+    const faqSearch = document.getElementById('faq-search');
+    if (faqSearch) {
+      faqSearch.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase().trim();
+        
+        // When searching, switch pill to all
+        if (term !== '') {
+          catPills.forEach(p => p.classList.toggle('active', p.dataset.cat === 'all'));
+        }
+
+        document.querySelectorAll('.faq-item').forEach(item => {
+          const qText = item.querySelector('.faq-question').textContent.toLowerCase();
+          const aText = item.querySelector('.faq-answer').textContent.toLowerCase();
+          const matches = qText.includes(term) || aText.includes(term);
+
+          item.style.display = matches ? 'block' : 'none';
+          if (matches && term !== '') {
+            item.classList.add('open');
+            item.querySelector('.faq-answer').style.maxHeight = item.querySelector('.faq-answer').scrollHeight + 'px';
+          } else if (term === '') {
+            item.classList.remove('open');
+            item.querySelector('.faq-answer').style.maxHeight = null;
+          }
+        });
+
+        // Hide empty groups
+        faqGroups.forEach(group => {
+          const visibleItems = group.querySelectorAll('.faq-item:not([style*="display: none"])');
+          group.style.display = visibleItems.length > 0 ? 'block' : 'none';
+        });
+      });
+    }
+  </script>
+</body>
+</html>

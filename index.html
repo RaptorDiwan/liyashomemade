@@ -3,39 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liya's Homemade | Traditional Health Mixes & Grains</title>
-  <meta name="description" content="Homemade health mixes, millet powders, and traditional grains ground the way Amma ground it. Pure, natural, and wholesome.">
+  <title>Liya's Homemade | Royal Heritage Health Mixes & Ancient Grains</title>
+  <meta name="description" content="Rediscover the royal vitality of South India's ancient grains. Stone-ground health mixes and traditional millet flours roasted and ground the traditional Chettinad way.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
-  <div class="announce">
-    Hand-ground weekly <span class="dot">•</span> Zero preservatives <span class="dot">•</span> Ships across India
+  <!-- Top Heritage Bar -->
+  <div class="royal-top-bar">
+    🏛️ Chettinad & Pandya Royal Grain Tradition • <span>Free Tamil Nadu Delivery on ₹499+</span> • Direct Kitchen WhatsApp Dispatch
   </div>
 
-  <!-- Header Section -->
+  <!-- Header -->
   <header>
-    <div class="header-inner">
-      <a href="index.html" class="logo">
-        <img src="logo.png" alt="Liya's Homemade Logo" class="logo-img">
-        <span>Liya's Homemade</span>
+    <div class="wrap header-inner">
+      <a href="index.html" class="brand logo">
+        <div class="logo-frame">
+          <img src="logo.png" alt="Liya's Homemade Logo" class="logo-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Liya's Homemade</span>
+          <span class="brand-subtitle">Heirloom Nutrition · Tamil Nadu</span>
+        </div>
       </a>
-      
-      <span class="kitchen-badge">From our kitchen, to yours</span>
 
-      <nav class="main-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="products.html">Products</a>
-        <a href="index.html#about">About Us</a>
-        <a href="health.html">Health Benefits</a>
-        <a href="index.html#contact">Contact</a>
+      <nav class="main-nav nav-links">
+        <a href="#collection" class="active">Heirloom Collection</a>
+        <a href="about.html">Royal Roots</a>
+        <a href="health.html">Ancient Wisdom</a>
+        <a href="faq.html">FAQs</a>
+        <a href="contact.html">Contact</a>
       </nav>
 
       <div class="header-actions">
-        <button class="cart-btn" onclick="location.href='cart.html'" aria-label="View Shopping Cart">
-          <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.06 1.4-2.54h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-          Cart - <span data-cart-count>0</span>
+        <button class="btn-gold-cart" onclick="toggleCartDrawer(true)" aria-label="View Shopping Cart">
+          <span style="font-size: 15px;">🛒</span> <span>Cart (<span data-cart-count>0</span>)</span>
         </button>
         <button class="menu-toggle" aria-label="Toggle Navigation Menu">
           <span></span>
@@ -46,115 +52,76 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-grid">
-        <!-- Notebook Page Column -->
-        <div class="notebook-page">
-          <div class="notebook-tape">From our kitchen notebook</div>
-          <h1>Ground the way <em style="color:var(--brand-green);">Amma</em> ground it.</h1>
-          <p class="lede">
-            Six traditional millet and grain mixes, roasted, sun-dried and stone-ground in small batches.
-            <br><br>
-            No preservatives. No shortcuts. Just honest ingredients.
-          </p>
-          <div class="hero-ctas">
-            <a href="#products" class="btn btn-primary">Shop Health Mixes</a>
-            <a href="#about" class="btn btn-outline">Our Story &rarr;</a>
-          </div>
-          
-          <div class="hero-trust-badges" style="margin-top: 32px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--paper-alt-2); padding-top: 20px;">
-            <div style="display: flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 700; color: var(--brand-green);">
-              <span style="color: #F1C40F; font-size: 15px;">★★★★★</span>
-              <span>Trusted by 500+ happy parents</span>
-            </div>
-            <span style="color: var(--line); font-size: 14px; display: inline-block;">|</span>
-            <div style="font-size: 12.5px; font-weight: 700; color: var(--ink-light); background: var(--paper-alt); padding: 4px 10px; border-radius: 4px; border: 1px dashed var(--line); display: flex; align-items: center; gap: 4px;">
-              <span>🛡️</span> FSSAI Registered
-            </div>
-            <span style="color: var(--line); font-size: 14px; display: inline-block;">|</span>
-            <div style="font-size: 12.5px; font-weight: 700; color: var(--ink-light); background: var(--paper-alt); padding: 4px 10px; border-radius: 4px; border: 1px dashed var(--line); display: flex; align-items: center; gap: 4px;">
-              <span>🧼</span> 100% Hygienic Kitchen
-            </div>
-          </div>
+  <!-- Royal Hero Section -->
+  <section class="hero-royal">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="heritage-badge">
+          👑 Chettinad Ancestral Nutrition
+        </div>
+        <h1>Heritage Nutrition <span>Passed Down Generations.</span></h1>
+        <p class="sub">
+          Rediscover the royal vitality of South India's ancient grains. From forbidden Karuppu Kavuni black rice to whole black urad dal, slow-roasted on wood embers and stone-milled in Chennai. Zero preservatives, zero chemical additives — just pure, honest nutrition.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#collection" class="btn-royal-primary">Explore Our Collection →</a>
+          <a href="about.html" class="btn-royal-secondary">Amma's Heritage Story</a>
         </div>
 
-        <!-- Image Gallery Column -->
-        <div class="hero-img-container">
-          <img src="assets/hero_pouches.jpg" alt="Liya's Homemade Health Mixes pouches standing together">
+        <div class="hero-pillars">
+          <div class="pillar-item"><span>🏛️</span> <strong>Stone Ground</strong> in Chennai</div>
+          <div class="pillar-item"><span>🌾</span> <strong>100% Heirloom</strong> Millets</div>
+          <div class="pillar-item"><span>🛡️</span> <strong>Zero</strong> Preservatives</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="hero-showcase-wrap">
+          <img src="assets/hero_pouches.jpg" alt="Liya's Homemade Heritage Health Mix Pouches">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- What's Inside? Section -->
-  <section class="block" style="padding-bottom: 20px;">
-    <div class="wrap">
-      <h2 class="section-title">What's inside?</h2>
-      <span class="section-subtitle-icon">🌱</span>
-      
-      <div class="category-row">
-        <!-- Ragi -->
-        <div class="category-card" onclick="location.href='product.html?id=ragi-flour'">
-          <div class="category-circle">
-            <img src="assets/category_ragi.jpg" alt="Ragi Grains">
-          </div>
-          <span>Ragi</span>
-        </div>
+  <!-- Sacred Grains Section -->
+  <section class="grain-section wrap">
+    <h2 class="gold-title">Sacred Grains of Tamil Nadu</h2>
 
-        <!-- Kambu -->
-        <div class="category-card" onclick="location.href='product.html?id=kambu-flour'">
-          <div class="category-circle">
-            <img src="assets/category_kambu.jpg" alt="Kambu Grains">
-          </div>
-          <span>Kambu</span>
-        </div>
-
-        <!-- Black Urad Dal -->
-        <div class="category-card" onclick="location.href='product.html?id=black-urad-dal-mix'">
-          <div class="category-circle">
-            <img src="assets/category_urad.jpg" alt="Black Urad Dal">
-          </div>
-          <span>Black Urad Dal</span>
-        </div>
-
-        <!-- Multi Grain -->
-        <div class="category-card" onclick="location.href='product.html?id=multigrain-health-mix-500g'">
-          <div class="category-circle">
-            <img src="assets/category_multigrain.jpg" alt="Multi Grain Mix">
-          </div>
-          <span>Multi Grain</span>
-        </div>
-
-        <!-- Porridge Mix -->
-        <div class="category-card" onclick="location.href='product.html?id=karuppu-kavuni-mix'">
-          <div class="category-circle">
-            <img src="assets/category_porridge.jpg" alt="Porridge Mix">
-          </div>
-          <span>Porridge Mix</span>
-        </div>
-
-        <!-- Baby Mix -->
-        <div class="category-card" onclick="location.href='product.html?id=baby-health-mix-200g'">
-          <div class="category-circle">
-            <img src="assets/category_porridge.jpg" alt="Baby Mix">
-          </div>
-          <span>Baby Mix</span>
-        </div>
-      </div>
+    <div class="grains-row">
+      <a href="product.html?id=karuppu-kavuni-mix-200g" class="grain-circle-card">
+        <div class="grain-border-ring"><img src="assets/category_kavuni.jpg" alt="Karuppu Kavuni Black Rice"></div>
+        <span>Karuppu Kavuni</span>
+      </a>
+      <a href="product.html?id=black-urad-dal-mix-200g" class="grain-circle-card">
+        <div class="grain-border-ring"><img src="assets/category_urad.jpg" alt="Black Urad Dal"></div>
+        <span>Black Urad</span>
+      </a>
+      <a href="product.html?id=ragi-flour-200g" class="grain-circle-card">
+        <div class="grain-border-ring"><img src="assets/category_ragi.jpg" alt="Finger Millet (Ragi)"></div>
+        <span>Finger Millet (Ragi)</span>
+      </a>
+      <a href="product.html?id=kambu-flour-200g" class="grain-circle-card">
+        <div class="grain-border-ring"><img src="assets/category_kambu.jpg" alt="Pearl Millet (Kambu)"></div>
+        <span>Pearl Millet (Kambu)</span>
+      </a>
+      <a href="product.html?id=multigrain-health-mix-200g" class="grain-circle-card">
+        <div class="grain-border-ring"><img src="assets/category_multigrain.jpg" alt="10 Millets Mix"></div>
+        <span>10 Millets Mix</span>
+      </a>
+      <a href="product.html?id=baby-instant-health-mix-200g" class="grain-circle-card">
+        <div class="grain-border-ring"><img src="assets/category_babymix.jpg" alt="Gentle Baby Health Mix"></div>
+        <span>Gentle Baby Mix</span>
+      </a>
     </div>
   </section>
 
-  <!-- Products Section -->
-  <section class="products-section" id="products">
-    <div class="wrap">
-      <h2 class="section-title">Our Products</h2>
-      <span class="section-subtitle-icon">🍃</span>
+  <!-- Collection Section -->
+  <section class="wrap" id="collection" style="padding-bottom: 50px;">
+    <h2 class="gold-title">The Royal Pantry</h2>
 
-      <div class="products-grid" id="products-grid">
-        <!-- Loaded dynamically from products.js -->
-      </div>
+    <div class="royal-products-grid" id="royal-grid">
+      <!-- Loaded dynamically from products.js -->
     </div>
   </section>
 
@@ -162,47 +129,43 @@
   <section class="value-props">
     <div class="wrap">
       <div class="props-grid">
-        <!-- Prop 1 -->
         <div class="prop-card">
           <div class="prop-icon">
             <svg viewBox="0 0 24 24"><path d="M2 21h20v-2H2v2zm10-18C6.48 3 2 7.48 2 13h20c0-5.52-4.48-10-10-10z"/></svg>
           </div>
           <div class="prop-info">
             <h4>Traditional Ingredients</h4>
-            <p>Cleaned & ground by hand</p>
+            <p>10 millets & nuts cleaned by hand</p>
           </div>
         </div>
 
-        <!-- Prop 2 -->
         <div class="prop-card">
           <div class="prop-icon">
             <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
           </div>
           <div class="prop-info">
-            <h4>Stone-ground Goodness</h4>
-            <p>Made slowly with love</p>
+            <h4>Stone-Ground Goodness</h4>
+            <p>Slow cold milling preserves oils</p>
           </div>
         </div>
 
-        <!-- Prop 3 -->
         <div class="prop-card">
           <div class="prop-icon">
             <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
           </div>
           <div class="prop-info">
-            <h4>No Preservatives</h4>
-            <p>100% natural mixtures</p>
+            <h4>Zero Preservatives</h4>
+            <p>100% natural pure mixtures</p>
           </div>
         </div>
 
-        <!-- Prop 4 -->
         <div class="prop-card">
           <div class="prop-icon">
             <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm12 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-5.5h-3V9h3v4z"/></svg>
           </div>
           <div class="prop-info">
-            <h4>Ships across India</h4>
-            <p>Delivered fresh to your home</p>
+            <h4>48h Transit Protection</h4>
+            <p>Delivered fresh across India</p>
           </div>
         </div>
       </div>
@@ -213,36 +176,38 @@
   <section class="story-testimonial-section" id="about">
     <div class="wrap">
       <div class="story-testimonial-grid">
-        <!-- Stone Grinder Image -->
         <div class="story-img-container">
           <img src="assets/stone_grinder.png" alt="A traditional stone grinder surrounded by grains">
         </div>
 
-        <!-- About Text -->
         <div class="story-content">
-          <h2>From our kitchen, to yours 🌾</h2>
+          <span class="section-eyebrow" style="color:var(--brass-gold); text-align:left;">OUR TRADITION</span>
+          <h2>Wholesome by nature, homemade by choice 🌾</h2>
           <p>
             At Liya's Homemade, we bring you the same goodness we serve our own family. 
-            All our mixes are hand-cleaned, dry-roasted, and stone-ground in small weekly batches. 
-            Made with care, just like Amma did.
+            All our mixes are crafted with 10 traditional millets, grains, and nuts — hand-cleaned, slow-roasted on low fire, and stone-ground in small weekly batches. 
+            Crafted with a mother's genuine love and care.
           </p>
-          <a href="#about" class="btn btn-outline">Our Story &rarr;</a>
+          <a href="about.html" class="btn btn-outline-gold">Amma's Heritage Story &rarr;</a>
         </div>
 
-        <!-- Testimonials -->
-        <div class="testimonial-card" style="display: flex; flex-direction: column; justify-content: space-between; min-height: 250px;">
+        <div class="testimonial-card">
           <div>
-            <h3>What our customers say</h3>
-            <p class="testimonial-quote" id="testi-quote" style="transition: opacity 0.3s ease; opacity: 1;">
-              "The taste is so natural and reminds me of what my paati used to make. My kids love it!"
+            <div class="testi-header">
+              <span class="testi-quote-mark">“</span>
+              <h3>What Our Customers Say</h3>
+            </div>
+            <p class="testimonial-quote" id="testi-quote">
+              "I made kambu idiyappam using this pearl millet flour, and it turned out really well! The idiyappam was soft, tasty, and delicious. The flour quality is excellent and perfect for making healthy, traditional food. Very happy with the product. Highly recommended! ⭐⭐⭐⭐⭐ Thank you @Liya's Home made🥰"
             </p>
           </div>
           <div>
-            <span class="testimonial-author" id="testi-author" style="transition: opacity 0.3s ease; opacity: 1; display: block;">— Priya, Coimbatore</span>
+            <span class="testimonial-author" id="testi-author">— Verified Customer, Tamil Nadu</span>
             <div class="testimonial-dots" id="testi-dots">
               <span class="testimonial-dot active" data-index="0"></span>
               <span class="testimonial-dot" data-index="1"></span>
               <span class="testimonial-dot" data-index="2"></span>
+              <span class="testimonial-dot" data-index="3"></span>
             </div>
           </div>
         </div>
@@ -250,38 +215,38 @@
     </div>
   </section>
 
-  <!-- Footer Section -->
+  <!-- Royal Footer Section -->
   <footer id="contact">
     <div class="wrap">
       <div class="footer-grid">
         <!-- Brand Info -->
         <div class="footer-brand">
-          <a href="index.html" class="logo" style="color: white;">
-            <img src="logo.png" alt="Liya's Homemade Logo" class="logo-img" style="border-color: rgba(255,255,255,0.2);">
-            <span>Liya's Homemade</span>
+          <a href="index.html" class="brand logo" style="margin-bottom: 14px;">
+            <div class="logo-frame footer-logo-frame">
+              <img src="logo.png" alt="Liya's Homemade Logo" class="logo-img">
+            </div>
+            <div class="brand-text">
+              <span class="brand-title">Liya's Homemade</span>
+              <span class="brand-subtitle">Heirloom Nutrition · Tamil Nadu</span>
+            </div>
           </a>
-          <p>
-            Traditional goodness, made with love. Wholesome by nature, homemade by choice.
+          <p class="tagline">Wholesome by nature, homemade by choice</p>
+          <p class="footer-desc">
+            Authentic South Indian stone-ground health mixes and traditional millet flours. Prepared in hygienic small batches in Tamil Nadu.
           </p>
-          <div class="social-links">
-            <a href="https://www.instagram.com/liyashomemade/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
-              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-            </a>
-            <a href="https://wa.me/918110021313" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.517 2.266 2.27 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.665.989 3.3 1.472 5.358 1.473 5.432 0 9.851-4.387 9.855-9.782.002-2.614-1.013-5.074-2.859-6.927C17.078 2.062 14.62 1.045 12.01 1.045c-5.444 0-9.866 4.39-9.87 9.786-.002 2.08.547 4.11 1.588 5.91l-.26.953-.943 3.44 3.535-.927.988.597zm11.215-4.595c-.3-.15-1.774-.875-2.048-.975-.274-.1-.474-.15-.674.15-.2.3-1.774 2.225-1.774 2.225s-.2.2-.55.05c-.35-.175-1.479-.545-2.818-1.739-1.042-.93-1.745-2.08-1.95-2.43-.2-.35-.02-.54.155-.715.16-.16.35-.4.525-.6.175-.2.24-.35.35-.58.115-.23.06-.43-.03-.63-.09-.2-.674-1.625-.925-2.225-.244-.588-.493-.51-.674-.52-.172-.01-.37-.01-.57-.01-.2 0-.525.075-.8.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.22 5.12 4.52 3.01 1.3 3.01.866 3.56.816.55-.05 1.775-.725 2.025-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/></svg>
-            </a>
+          <div class="footer-fssai-pill">
+            <span>🛡️</span> FSSAI Registered Kitchen • 100% Homemade
           </div>
         </div>
 
         <!-- Quick Links -->
         <div class="footer-col">
-          <h4>Quick Links</h4>
+          <h4>Explore</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="index.html#about">About Us</a></li>
-            <li><a href="health.html">Health Benefits</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="#collection">Heirloom Collection</a></li>
+            <li><a href="about.html">Royal Roots</a></li>
+            <li><a href="health.html">Ancient Wisdom</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
 
@@ -289,17 +254,17 @@
         <div class="footer-col">
           <h4>Customer Care</h4>
           <ul>
-            <li><a href="#">Shipping & Delivery</a></li>
-            <li><a href="refund-policy.html">Returns & Refunds</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="shipping.html">Shipping & Delivery</a></li>
+            <li><a href="refund-policy.html">48h Transit Guarantee</a></li>
+            <li><a href="faq.html">FAQs & Preparation</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
           </ul>
         </div>
 
-        <!-- Contact Info -->
+        <!-- Order & Support -->
         <div class="footer-col footer-contact">
-          <h4>Get in touch</h4>
+          <h4>Order & Support</h4>
           <p>
             <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.149 15.149 0 0 0 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
             +91 81100 21313
@@ -310,14 +275,19 @@
           </p>
           <p>
             <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-            Chennai, Tamilnadu
+            Chennai, Tamil Nadu
           </p>
+          
+          <div style="margin-top: 12px; padding: 10px 14px; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(212,162,75,0.3);">
+            <div style="font-size: 11px; text-transform: uppercase; color: var(--brass-gold); font-weight: 700; letter-spacing: 0.05em;">Official Kotak UPI</div>
+            <div style="font-size: 13.5px; font-weight: 700; color: #FFFFFF; font-family: monospace; margin-top: 2px;">8110021313@kotakbank</div>
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
         <span>&copy; 2026 Liya's Homemade. All rights reserved.</span>
-        <span>Made with care, packed by hand.</span>
+        <span style="color: var(--brass-gold);">Authentic South Indian Millets & Grains.</span>
       </div>
     </div>
   </footer>
@@ -332,33 +302,64 @@
   <script src="cart.js"></script>
 
   <script>
-    // Toggle Mobile Navigation
-    const menuToggle = document.querySelector('.menu-toggle');
-    const mainNav = document.querySelector('.main-nav');
-    if (menuToggle && mainNav) {
-      menuToggle.addEventListener('click', () => {
-        mainNav.style.display = mainNav.style.display === 'flex' ? 'none' : 'flex';
-        mainNav.style.flexDirection = 'column';
-        mainNav.style.position = 'absolute';
-        mainNav.style.top = '100%';
-        mainNav.style.left = '0';
-        mainNav.style.right = '0';
-        mainNav.style.backgroundColor = 'var(--paper)';
-        mainNav.style.padding = '16px';
-        mainNav.style.borderBottom = '1px solid var(--line)';
-        mainNav.style.gap = '12px';
-      });
+    // Render Products Grid on Homepage (Royal Heritage Style)
+    const rGrid = document.getElementById("royal-grid");
+    if (rGrid && typeof BASE_PRODUCTS !== "undefined") {
+      rGrid.innerHTML = BASE_PRODUCTS.map(base => {
+        const v = base.variants[0];
+        return `
+          <div class="royal-card">
+            <a href="product.html?id=${v.id}" style="text-decoration:none; color:inherit;">
+              <div class="royal-card-img">
+                <img src="${base.image}" alt="${base.name}">
+              </div>
+              <h3 class="royal-card-title">${base.name}</h3>
+              <p class="royal-card-desc">${base.tagline}</p>
+            </a>
+
+            ${base.variants.length > 1 ? `
+              <div class="weight-toggles">
+                ${base.variants.map((varItem, i) => `
+                  <button type="button" class="weight-toggle-btn ${i === 0 ? 'active' : ''}" 
+                          onclick="selectRoyalVariant(this, '${varItem.id}', ${varItem.price}, '${varItem.weight}')">
+                    ${varItem.weight}
+                  </button>
+                `).join("")}
+              </div>
+            ` : ''}
+
+            <div class="royal-card-footer">
+              <div class="royal-price" id="r-price-${base.groupId}">₹${v.price} <small style="font-size:12px; color:var(--ink-muted); font-weight:normal;">/ ${v.weight}</small></div>
+              <div style="color:var(--brass-gold); font-size:13px; font-weight:700;">★ 4.9</div>
+            </div>
+
+            <button type="button" class="btn-add-royal" id="btn-royal-${base.groupId}" onclick="addToCart('${v.id}', 1)">
+              Add to Royal Pantry
+            </button>
+          </div>
+        `;
+      }).join("");
     }
 
-    // Render Products Grid on Homepage
-    const grid = document.getElementById("products-grid");
-    if (grid) {
-      grid.innerHTML = PRODUCTS.filter(p => !p.isVariant).map(p => renderProductCardHTML(p)).join("");
-      updateAllCartControls();
+    function selectRoyalVariant(btn, variantId, price, weight) {
+      const card = btn.closest(".royal-card");
+      if (!card) return;
+      card.querySelectorAll(".weight-toggle-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      
+      const priceEl = card.querySelector(".royal-price");
+      if (priceEl) priceEl.innerHTML = `₹${price} <small style="font-size:12px; color:var(--ink-muted); font-weight:normal;">/ ${weight}</small>`;
+
+      const addBtn = card.querySelector(".btn-add-royal");
+      if (addBtn) addBtn.setAttribute("onclick", `addToCart('${variantId}', 1)`);
     }
 
     // Testimonials Carousel Logic
     const TESTIMONIALS = [
+      {
+        quote: `"I made kambu idiyappam using this pearl millet flour, and it turned out really well! The idiyappam was soft, tasty, and delicious. The flour quality is excellent and perfect for making healthy, traditional food. Very happy with the product. Highly recommended! ⭐⭐⭐⭐⭐ Thank you @Liya's Home made🥰"`,
+        author: "— Verified Customer, Tamil Nadu"
+      },
       {
         quote: `"The taste is so natural and reminds me of what my paati used to make. My kids love it!"`,
         author: "— Priya, Coimbatore"
@@ -368,7 +369,7 @@
         author: "— Suresh, Chennai"
       },
       {
-        quote: `"My 8-month-old baby absolute loves the Baby Health Mix. It is so easy to digest and gives me peace of mind because I know exactly what ingredients went into it. Highly recommended!"`,
+        quote: `"My 8-month-old baby absolute loves the Baby Instant Health Mix. It is so easy to digest and gives me peace of mind because I know exactly what ingredients went into it. Highly recommended!"`,
         author: "— Jeevitha, Chennai"
       }
     ];
@@ -381,7 +382,6 @@
     function showTestimonial(index) {
       if (!testiQuote || !testiAuthor) return;
       
-      // Fade out
       testiQuote.style.opacity = 0;
       testiAuthor.style.opacity = 0;
       
@@ -390,7 +390,6 @@
         testiQuote.textContent = TESTIMONIALS[index].quote;
         testiAuthor.textContent = TESTIMONIALS[index].author;
         
-        // Update active dot indicator
         if (testiDotsContainer) {
           testiDotsContainer.querySelectorAll(".testimonial-dot").forEach((dot, idx) => {
             if (idx === index) {
@@ -401,13 +400,11 @@
           });
         }
         
-        // Fade in
         testiQuote.style.opacity = 1;
         testiAuthor.style.opacity = 1;
       }, 300);
     }
 
-    // Set up click handlers on dots
     if (testiDotsContainer) {
       testiDotsContainer.querySelectorAll(".testimonial-dot").forEach((dot, idx) => {
         dot.addEventListener("click", () => {
@@ -417,7 +414,6 @@
       });
     }
 
-    // Auto rotate every 6 seconds
     let testiInterval = setInterval(() => {
       const nextIndex = (currentTestiIndex + 1) % TESTIMONIALS.length;
       showTestimonial(nextIndex);

@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Products | Liya's Homemade</title>
+  <meta name="description" content="Browse our pure, stone-ground millets, whole grain flours, traditional health mixes, and gentle baby cereals. Hand-ground weekly in small batches.">
+  <link rel="icon" type="image/png" href="logo.png">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
   <!-- Top Announcement Bar -->
   <div class="announce">
-    Hand-ground weekly <span class="dot">•</span> Zero preservatives <span class="dot">•</span> Ships across India
+    Hand-ground weekly <span class="dot">•</span> Zero preservatives <span class="dot">•</span> Free TN Delivery on ₹499+ <span class="dot">•</span> Pan-India Courier
   </div>
 
   <!-- Header Section -->
@@ -21,18 +23,18 @@
         <span>Liya's Homemade</span>
       </a>
       
-      <span class="kitchen-badge">From our kitchen, to yours</span>
+      <span class="kitchen-badge">Wholesome by nature, homemade by choice</span>
 
       <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="products.html" class="active">Products</a>
-        <a href="index.html#about">About Us</a>
+        <a href="about.html">About Us</a>
         <a href="health.html">Health Benefits</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
 
       <div class="header-actions">
-        <button class="cart-btn" onclick="location.href='cart.html'" aria-label="View Shopping Cart">
+        <button class="cart-btn" aria-label="View Shopping Cart">
           <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.06 1.4-2.54h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
           Cart - <span data-cart-count>0</span>
         </button>
@@ -47,13 +49,84 @@
 
   <!-- Products Catalog Section -->
   <main class="products-section wrap" style="padding-top: 40px; padding-bottom: 80px;">
-    <h1 class="section-title" style="text-align: left; margin-bottom: 8px;">Our Homemade Grains & Mixes</h1>
-    <p style="color: var(--ink-light); font-size: 16px; margin-bottom: 40px; max-width: 600px; line-height: 1.5;">
-      Dry-roasted and stone-ground by hand in small batches. Zero preservatives, zero artificial colors, made exactly like at home.
-    </p>
+    <div class="catalog-header-bar">
+      <h1 class="section-title" style="text-align: left; margin-bottom: 8px;">Our Homemade Grains & Mixes</h1>
+      <p style="color: var(--ink-light); font-size: 16px; max-width: 680px; line-height: 1.5;">
+        Dry-roasted, sun-dried, and stone-ground by hand in small batches. Zero preservatives, zero artificial colors, made exactly like at home.
+      </p>
+    </div>
 
+    <!-- Price List Quick View & Free Shipping Notice -->
+    <div style="display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-top: 16px; margin-bottom: 24px;">
+      <button type="button" id="toggle-pricelist-btn" class="btn btn-sm btn-outline" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; border-color: var(--warm-gold); color: var(--brand-green); background: #FAF5ED; padding: 8px 16px;">
+        <span>📋</span> View Complete Price List (200g, 500g, 1kg)
+      </button>
+      <div style="font-size: 13px; font-weight: 600; color: var(--brand-green); display: flex; align-items: center; gap: 6px;">
+        <span>🚚</span> Free Delivery across Tamil Nadu on orders ₹499+ (Pan-India Courier)
+      </div>
+    </div>
+
+    <!-- Official Price List Section (Collapsible) -->
+    <div id="pricelist-container" style="display: none; background: #FFFDF9; border: 1px solid var(--warm-gold); border-radius: 16px; padding: 24px; margin-bottom: 30px; box-shadow: 0 4px 16px rgba(0,0,0,0.04); overflow-x: auto;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 1px dashed var(--warm-gold); padding-bottom: 12px;">
+        <div>
+          <span style="font-family: 'Kalam', cursive; font-size: 1.1rem; color: var(--warm-gold); display: block;">Official Product & Price List</span>
+          <h3 style="margin: 0; color: var(--brand-green); font-size: 1.3rem;">Wholesome by Nature, Homemade by Choice</h3>
+        </div>
+        <button type="button" id="close-pricelist-btn" style="background: none; border: 1px solid var(--border); border-radius: 50%; width: 32px; height: 32px; font-size: 1.2rem; cursor: pointer; color: var(--text-muted); display: flex; align-items: center; justify-content: center;">&times;</button>
+      </div>
+      <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+        <thead>
+          <tr style="border-bottom: 2px solid var(--border); color: var(--brand-green); background: #f7f2ea;">
+            <th style="padding: 12px 14px; border-radius: 8px 0 0 8px;">#</th>
+            <th style="padding: 12px 14px;">Product Name</th>
+            <th style="padding: 12px 14px; text-align: center;">200g</th>
+            <th style="padding: 12px 14px; text-align: center;">500g</th>
+            <th style="padding: 12px 14px; text-align: center;">1kg</th>
+            <th style="padding: 12px 14px; text-align: right; border-radius: 0 8px 8px 0;">View</th>
+          </tr>
+        </thead>
+        <tbody id="pricelist-tbody">
+          <!-- Populated in JS from BASE_PRODUCTS -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Catalog Interactive Toolbar: Search & Sort -->
+    <div class="catalog-toolbar">
+      <div class="catalog-search-wrap">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="catalog-search" class="catalog-search-input" placeholder="Search by grain, benefit, or dish (e.g. ragi, baby, kanji, dosa)...">
+      </div>
+
+      <div class="catalog-sort-wrap">
+        <label for="catalog-sort">Sort by:</label>
+        <select id="catalog-sort" class="catalog-sort-select">
+          <option value="featured">Featured / Best Sellers</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="rating">Top Rated (★)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Category Filter Pills -->
+    <div class="category-filter-pills" id="category-pills">
+      <button type="button" class="filter-pill active" data-category="all">All Handcrafted Mixes (8)</button>
+      <button type="button" class="filter-pill" data-category="flours">Millets & Flours (3)</button>
+      <button type="button" class="filter-pill" data-category="health-mix">Health & Energy Mixes (3)</button>
+      <button type="button" class="filter-pill" data-category="baby-food">Baby & Toddler Food (2)</button>
+    </div>
+
+    <!-- Results Status Info -->
+    <div class="catalog-results-info">
+      <span id="results-count">Showing 8 mixes</span>
+      <span style="color: var(--brand-green); font-weight: 600;">✨ 100% Preservative Free</span>
+    </div>
+
+    <!-- Products Grid -->
     <div class="products-grid" id="products-grid">
-      <!-- Loaded dynamically from products.js -->
+      <!-- Loaded dynamically -->
     </div>
   </main>
 
@@ -81,19 +154,19 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
-            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="health.html">Health Benefits</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Customer Care</h4>
           <ul>
-            <li><a href="#">Shipping & Delivery</a></li>
+            <li><a href="shipping.html">Shipping & Delivery</a></li>
             <li><a href="refund-policy.html">Returns & Refunds</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="footer-col footer-contact">
@@ -125,25 +198,181 @@
     const mainNav = document.querySelector('.main-nav');
     if (menuToggle && mainNav) {
       menuToggle.addEventListener('click', () => {
-        mainNav.style.display = mainNav.style.display === 'flex' ? 'none' : 'flex';
-        mainNav.style.flexDirection = 'column';
-        mainNav.style.position = 'absolute';
-        mainNav.style.top = '100%';
-        mainNav.style.left = '0';
-        mainNav.style.right = '0';
-        mainNav.style.backgroundColor = 'var(--paper)';
-        mainNav.style.padding = '16px';
-        mainNav.style.borderBottom = '1px solid var(--line)';
-        mainNav.style.gap = '12px';
+        mainNav.classList.toggle('mobile-open');
       });
     }
 
-    // Render Products Grid
-    const grid = document.getElementById("products-grid");
-    if (grid) {
-      grid.innerHTML = PRODUCTS.filter(p => !p.isVariant).map(p => renderProductCardHTML(p)).join("");
+    // Catalog state
+    let activeCategory = 'all';
+    let searchQuery = '';
+    let sortMode = 'featured';
+
+    const searchInput = document.getElementById('catalog-search');
+    const sortSelect = document.getElementById('catalog-sort');
+    const pillsContainer = document.getElementById('category-pills');
+    const resultsCountEl = document.getElementById('results-count');
+    const grid = document.getElementById('products-grid');
+
+    function filterAndRenderProducts() {
+      // 1. Base list of main product cards (not variants)
+      let list = PRODUCTS.filter(p => !p.isVariant);
+
+      // 2. Filter by category
+      if (activeCategory !== 'all') {
+        list = list.filter(p => p.category === activeCategory);
+      }
+
+      // 3. Filter by search query
+      if (searchQuery.trim() !== '') {
+        const q = searchQuery.toLowerCase().trim();
+        list = list.filter(p => {
+          const matchName = p.name.toLowerCase().includes(q);
+          const matchTag = p.tagline.toLowerCase().includes(q);
+          const matchDesc = p.description.toLowerCase().includes(q);
+          const matchIng = p.ingredients && p.ingredients.some(ing => ing.toLowerCase().includes(q));
+          const matchDish = p.dishes && p.dishes.some(d => d.toLowerCase().includes(q));
+          const matchTags = p.tags && p.tags.some(t => t.toLowerCase().includes(q));
+          return matchName || matchTag || matchDesc || matchIng || matchDish || matchTags;
+        });
+      }
+
+      // 4. Sort
+      if (sortMode === 'price-low') {
+        list.sort((a, b) => a.price - b.price);
+      } else if (sortMode === 'price-high') {
+        list.sort((a, b) => b.price - a.price);
+      } else if (sortMode === 'rating') {
+        list.sort((a, b) => parseFloat(b.rating || 0) - parseFloat(a.rating || 0));
+      } else {
+        // Featured: bestsellers first
+        list.sort((a, b) => (b.bestseller ? 1 : 0) - (a.bestseller ? 1 : 0));
+      }
+
+      // 5. Update counter
+      if (resultsCountEl) {
+        resultsCountEl.textContent = `Showing ${list.length} ${list.length === 1 ? 'mix' : 'mixes'}`;
+      }
+
+      // 6. Render
+      if (!grid) return;
+      if (list.length === 0) {
+        const safeQuery = searchQuery.replace(/[&<>"']/g, m => ({
+          '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+        }[m]));
+        grid.innerHTML = `
+          <div class="catalog-empty">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <h3>No homemade mixes found</h3>
+            <p>No products matched "${safeQuery}". Try searching for ragi, kambu, baby mix, or clear your search.</p>
+            <button class="btn btn-primary" onclick="clearFilters()">Reset Filters</button>
+          </div>
+        `;
+      } else {
+        grid.innerHTML = list.map(p => renderProductCardHTML(p)).join("");
+      }
+
       updateAllCartControls();
     }
+
+    window.clearFilters = function() {
+      searchQuery = '';
+      activeCategory = 'all';
+      sortMode = 'featured';
+      if (searchInput) searchInput.value = '';
+      if (sortSelect) sortSelect.value = 'featured';
+      pillsContainer.querySelectorAll('.filter-pill').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.category === 'all');
+      });
+      filterAndRenderProducts();
+    };
+
+    // Category click listener
+    if (pillsContainer) {
+      pillsContainer.querySelectorAll('.filter-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+          pillsContainer.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeCategory = btn.dataset.category;
+          filterAndRenderProducts();
+        });
+      });
+    }
+
+    // Search input listener
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        filterAndRenderProducts();
+      });
+    }
+
+    // Sort select listener
+    if (sortSelect) {
+      sortSelect.addEventListener('change', (e) => {
+        sortMode = e.target.value;
+        filterAndRenderProducts();
+      });
+    }
+
+    // Check if category is passed via URL hash or query param (e.g. ?cat=baby-food)
+    const urlParams = new URLSearchParams(window.location.search);
+    const catParam = urlParams.get('cat');
+    if (catParam) {
+      const targetPill = pillsContainer.querySelector(`[data-category="${catParam}"]`);
+      if (targetPill) {
+        pillsContainer.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+        targetPill.classList.add('active');
+        activeCategory = catParam;
+      }
+    }
+
+    // Populate Official Price List Table
+    const pricelistTbody = document.getElementById('pricelist-tbody');
+    if (pricelistTbody && typeof BASE_PRODUCTS !== 'undefined') {
+      pricelistTbody.innerHTML = BASE_PRODUCTS.map((p, idx) => {
+        const v200 = p.variants.find(v => v.weight.includes("200")) || p.variants[0];
+        const v500 = p.variants.find(v => v.weight.includes("500")) || p.variants[1];
+        const v1kg = p.variants.find(v => v.weight.includes("1kg")) || p.variants[2];
+        return `
+          <tr style="border-bottom: 1px solid #f0e8dc;">
+            <td style="padding: 12px 14px; font-weight: 700; color: var(--warm-gold);">${idx + 1}</td>
+            <td style="padding: 12px 14px; font-weight: 600; color: var(--text-dark);">
+              <a href="product.html?id=${v200 ? v200.id : p.groupId}" style="color: inherit; text-decoration: none;">
+                ${p.name}
+              </a>
+              <span style="display: block; font-size: 0.82rem; color: var(--text-muted); font-weight: 400;">${p.tagline}</span>
+            </td>
+            <td style="padding: 12px 14px; text-align: center; font-weight: 700; color: var(--brand-green);">₹${v200 ? v200.price : '—'}</td>
+            <td style="padding: 12px 14px; text-align: center; font-weight: 700; color: var(--brand-green);">₹${v500 ? v500.price : '—'}</td>
+            <td style="padding: 12px 14px; text-align: center; font-weight: 700; color: var(--brand-green);">₹${v1kg ? v1kg.price : '—'}</td>
+            <td style="padding: 12px 14px; text-align: right;">
+              <a href="product.html?id=${v200 ? v200.id : p.groupId}" class="btn btn-sm btn-outline" style="padding: 4px 10px; font-size: 0.8rem;">Select &rarr;</a>
+            </td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    // Toggle Price List
+    const toggleBtn = document.getElementById('toggle-pricelist-btn');
+    const closeBtn = document.getElementById('close-pricelist-btn');
+    const plContainer = document.getElementById('pricelist-container');
+    if (toggleBtn && plContainer) {
+      toggleBtn.addEventListener('click', () => {
+        const isHidden = plContainer.style.display === 'none';
+        plContainer.style.display = isHidden ? 'block' : 'none';
+        toggleBtn.innerHTML = isHidden ? '<span>✕</span> Hide Price List' : '<span>📋</span> View Complete Price List (200g, 500g, 1kg)';
+      });
+    }
+    if (closeBtn && plContainer && toggleBtn) {
+      closeBtn.addEventListener('click', () => {
+        plContainer.style.display = 'none';
+        toggleBtn.innerHTML = '<span>📋</span> View Complete Price List (200g, 500g, 1kg)';
+      });
+    }
+
+    // Initial render
+    filterAndRenderProducts();
   </script>
 </body>
 </html>
